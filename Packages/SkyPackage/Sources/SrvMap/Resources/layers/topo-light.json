@@ -1,53 +1,50 @@
 [
   {
-    "source": "topo",
     "id": "land_polygon",
     "type": "fill",
-    "minzoom": 1.0,
-    "maxzoom": 20.2,
+    "source": "topo",
     "source-layer": "land_polygon",
-    "layout": {},
+    "minzoom": 0,
+    "maxzoom": 20.2,
     "paint": {
-      "fill-color": "#005500",
-      "fill-outline-color": "#002266"
+      "fill-color": "#F5F2EE",
+      "fill-outline-color": "#D8D4D0"
     }
   },
   {
-    "source": "topo",
     "id": "island_polygon",
     "type": "fill",
-    "minzoom": 1.0,
-    "maxzoom": 20.2,
+    "source": "topo",
     "source-layer": "island_polygon",
-    "layout": {},
+    "minzoom": 0,
+    "maxzoom": 20.2,
     "paint": {
-      "fill-color": "#005500",
-      "fill-outline-color": "#002266"
+      "fill-color": "#F5F2EE",
+      "fill-outline-color": "#D8D4D0"
     }
   },
   {
-    "source": "topo",
     "id": "water_polygon",
     "type": "fill",
-    "minzoom": 1.0,
-    "maxzoom": 20.2,
+    "source": "topo",
     "source-layer": "water_polygon",
-    "layout": {},
+    "minzoom": 0,
+    "maxzoom": 20.2,
     "paint": {
-      "fill-color": "#0088CC"
+      "fill-color": "#D0D8DC"
     }
   },
   {
-    "source": "topo",
     "id": "water_line",
     "type": "line",
-    "minzoom": 1.0,
-    "maxzoom": 20.0,
+    "source": "topo",
     "source-layer": "water_line",
+    "minzoom": 0,
+    "maxzoom": 20.0,
     "paint": {
-      "line-color": "#0088CC",
+      "line-color": "#B8C4CC",
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 0, 0.2, 10, 1],
-      "line-width": 2.0
+      "line-width": 1.5
     }
   }
 ]

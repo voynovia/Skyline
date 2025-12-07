@@ -1,0 +1,30 @@
+{
+    "id": "base",
+    "version": 8,
+    "name": "Base",
+    "zoom": 4.0,
+    "pitch": 0,
+    "center": [15.640588, 46.537791],
+    "bearing": 0,
+    "glyphs": "http://localhost:8080/glyphs/{fontstack}/{range}.pbf",
+    "sources": {},
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "#D0D8DC"
+            }
+        }
+    ],
+    "sky": {
+        "atmosphere-blend": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0, 0.8,
+            5, 0.5,
+            7, 0
+        ]
+    }
+}

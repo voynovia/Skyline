@@ -86,6 +86,26 @@ public actor MapServer {
     mbTilesSources[id]
   }
 
+  /// Получение конфигурации источника для JS (с подставленным портом)
+  /// Возвращает JSON Data для безопасной передачи через границу actor
+  public func sourceConfigurationData(for sourceId: String) -> Data? {
+    guard let port else { return nil }
+
+    let config: [String: Any]?
+    if let source = mbTilesSources[sourceId] {
+      config = source.configuration(port: port)
+    } else if let source = pmTilesSources[sourceId] {
+      config = source.configuration(serverPort: port)
+    } else if let source = geoJSONSources[sourceId] {
+      config = source.configuration(serverPort: port)
+    } else {
+      config = nil
+    }
+
+    guard let config else { return nil }
+    return try? JSONSerialization.data(withJSONObject: config)
+  }
+
   // MARK: - Private
 
   private func setupRoutes(server: HTTPServer) async {
@@ -97,8 +117,7 @@ public actor MapServer {
     await server.appendRoute("GET /pmtiles.js", to: handler)
     await server.appendRoute("GET /map.js", to: handler)
     await server.appendRoute("GET /functions.js", to: handler)
-    await server.appendRoute("GET /base-light.json", to: handler)
-    await server.appendRoute("GET /base-dark.json", to: handler)
+    await server.appendRoute("GET /base.json", to: handler)
     await server.appendRoute("GET /glyphs/*", to: handler)
     await server.appendRoute("GET /sprites/*", to: handler)
     await server.appendRoute("GET /tiles/*", to: handler)
@@ -158,9 +177,9 @@ public actor MapServer {
     }
   }
 
-  func handleBaseStyle(filename: String) async throws -> HTTPResponse {
+  func handleStyle() async throws -> HTTPResponse {
     let wwwPath = await resourceManager.wwwPath
-    let filePath = wwwPath.deletingLastPathComponent().appendingPathComponent(filename)
+    let filePath = wwwPath.deletingLastPathComponent().appendingPathComponent("base.json")
 
     guard FileManager.default.fileExists(atPath: filePath.path) else {
       return HTTPResponse(statusCode: .notFound)
@@ -426,9 +445,8 @@ private final class RequestHandler: HTTPHandler, @unchecked Sendable {
   func handleRequest(_ request: HTTPRequest) async throws -> HTTPResponse {
     let path = request.path
 
-    if path == "/base-light.json" || path == "/base-dark.json" {
-      let filename = String(path.dropFirst())
-      return try await mapServer.handleBaseStyle(filename: filename)
+    if path == "/base.json" {
+      return try await mapServer.handleStyle()
     }
 
     if path.hasPrefix("/glyphs/") {

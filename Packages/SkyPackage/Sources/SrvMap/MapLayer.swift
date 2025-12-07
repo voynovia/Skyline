@@ -1,12 +1,13 @@
 import Foundation
 
 public enum MapLayer: String, CaseIterable, Sendable {
-  case topography
+  case topographyLight
+  case topographyDark
   case hypsometry
 
   public var sourceId: String {
     switch self {
-    case .topography: return "topo"
+    case .topographyLight, .topographyDark: return "topo"
     case .hypsometry: return "hypsometry"
     }
   }
@@ -14,7 +15,8 @@ public enum MapLayer: String, CaseIterable, Sendable {
   public var layerConfigURL: URL? {
     let filename: String
     switch self {
-    case .topography: filename = "topo"
+    case .topographyLight: filename = "topo-light"
+    case .topographyDark: filename = "topo-dark"
     case .hypsometry: filename = "hypsometry"
     }
     return Bundle.module.url(forResource: filename, withExtension: "json", subdirectory: "Resources/layers")

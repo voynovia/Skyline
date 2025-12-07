@@ -6,9 +6,11 @@ public struct ContentView: View {
   @State private var server: MapServer?
   @State private var loadingStatus = "Инициализация..."
   @State private var isLoading = true
+  @State private var topoLayers: [[String: Any]] = []
   @State private var hypsometryLayers: [[String: Any]] = []
   @State private var hypsometrySourceConfig: [String: Any] = [:]
   @State private var isHypsometryEnabled = true
+  @Environment(\.colorScheme) private var colorScheme
 
   public init() {}
 
@@ -18,7 +20,7 @@ public struct ContentView: View {
         ZStack(alignment: .bottomLeading) {
           MapView(
             server: server,
-            initialLayers: hypsometryLayers,
+            initialLayers: topoLayers + hypsometryLayers,
             sourceEnabled: $isHypsometryEnabled,
             toggleSourceId: "hypsometry",
             toggleSourceConfig: hypsometrySourceConfig,
@@ -78,19 +80,25 @@ public struct ContentView: View {
       await mapServer.register(topoSource)
       await mapServer.register(hypsometrySource)
 
-      // 4. загрузить конфигурацию слоёв рельефа
+      // 4. загрузить конфигурацию слоёв topo в зависимости от темы
+      let topoLayer: MapLayer = colorScheme == .dark ? .topographyDark : .topographyLight
+      if let topoURL = topoLayer.layerConfigURL,
+         let data = try? Data(contentsOf: topoURL),
+         let layers = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
+        topoLayers = layers
+      }
+
+      // 5. загрузить конфигурацию слоёв рельефа
       if let hypsometryURL = MapLayer.hypsometry.layerConfigURL,
          let data = try? Data(contentsOf: hypsometryURL),
          let layers = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
         hypsometryLayers = layers
       }
 
-      // 5. сохранить конфигурацию source для toggle
-      if let port = await mapServer.port {
-        hypsometrySourceConfig = [
-          "type": "vector",
-          "tiles": ["http://localhost:\(port)/tiles/hypsometry/{z}/{x}/{y}.pbf"]
-        ]
+      // 6. сохранить конфигурацию source для toggle
+      if let data = await mapServer.sourceConfigurationData(for: "hypsometry"),
+         let config = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+        hypsometrySourceConfig = config
       }
 
       self.server = mapServer

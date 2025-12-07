@@ -3,16 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // получаем базовый URL из текущей страницы
   const baseURL = window.location.origin;
 
+  // единый стиль base.json (без topo слоёв)
+  const styleFile = 'base.json';
+
   // определяем тему из URL параметра (передаётся из Swift)
   const urlParams = new URLSearchParams(window.location.search);
   const theme = urlParams.get('theme') || 'light';
   const isDarkMode = theme === 'dark';
-  const styleFile = isDarkMode ? 'base-dark.json' : 'base-light.json';
 
   // обновляем фон контейнера в зависимости от темы
-  document.getElementById('map').style.background = isDarkMode ? '#000000' : '#E8E4E0';
+  document.getElementById('map').style.background = isDarkMode ? '#1A1A1A' : '#E8E4E0';
 
-  console.log(`Theme: ${theme}, isDarkMode: ${isDarkMode}, styleFile: ${styleFile}`);
+  console.log(`Theme: ${theme}, isDarkMode: ${isDarkMode}`);
 
   // регистрируем протокол pmtiles
   const protocol = new pmtiles.Protocol();
@@ -21,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const map = new maplibregl.Map({
     container: 'map',
     style: `${baseURL}/${styleFile}`,
-    zoom: 4,
-    minZoom: 2,
+    zoom: 3,
+    minZoom: 3,
     maxZoom: 18,
     attributionControl: false,
     renderWorldCopies: false,
@@ -221,6 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Map loaded successfully");
 
     map.setProjection({ type: 'globe' });
+
+    // обновляем цвет фона в зависимости от темы
+    const bgColor = isDarkMode ? '#1E2528' : '#D0D8DC';
+    map.setPaintProperty('background', 'background-color', bgColor);
 
     try {
       window.webkit.messageHandlers.zoom.postMessage(map.getZoom().toFixed(2));

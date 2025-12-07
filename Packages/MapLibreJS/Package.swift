@@ -27,8 +27,7 @@ let package = Package(
       ],
       resources: [
         .copy("Resources/www"),
-        .copy("Resources/base-light.json"),
-        .copy("Resources/base-dark.json"),
+        .copy("Resources/base.json"),
       ]
     ),
     .testTarget(
