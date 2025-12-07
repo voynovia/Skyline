@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+      "id": "windRaster",
+      "minzoom": 0.0,
+      "maxzoom": 6.9,
+      "layerOpacity": 0.65,
+      "insertAfterId": "WxBaseLayer"
+    }
+  ]
+}

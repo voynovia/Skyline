@@ -1,0 +1,372 @@
+{
+  "layers": [
+    {
+      "id": "widthLine",
+      "iosFilter": "tp == 'enroute'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "insertAfterId": "routeBottomLayer-dim",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-opacity": 0.0,
+        "line-color": "width_line",
+        "line-width": [
+          "interpolate",
+          ["exponential", 2],
+          ["zoom"],
+          2, ["*", 200, ["^", 2, -4]],
+          20, ["*", 1400, ["^", 2, 8]]
+        ]
+      }
+    },
+    {
+      "id": "hiddenLine",
+      "iosFilter": "tp == 'hidden'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "ROUTE_LINE",
+        "line-width": 2
+      }
+    },
+    {
+      "id": "shadowLine",
+      "iosFilter": "tp == 'shadow'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-opacity": 1.0,
+        "line-color": "shadow_line",
+        "line-width": 8
+      }
+    },
+    {
+      "id": "gotoLine",
+      "iosFilter": "tp == 'goto'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "ROUTE_LINE",
+        "line-width": 8
+      }
+    },
+    
+    {
+      "id": "skipLine",
+      "iosFilter": "tp == 'skip'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "ROUTE_LINE",
+        "line-width": 8
+      }
+    },
+    
+    {
+      "id": "temporatyLine",
+      "iosFilter": "tp == 'temporary'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-dasharray": [2,1],
+        "line-color": "ROUTE_LINE",
+        "line-width": 8
+      }
+    },
+    
+    {
+      "id": "rifLine",
+      "iosFilter": "tp == 'rif'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "RIF_LINE",
+        "line-width": 8
+      }
+    },
+    
+    {
+      "id": "enrouteLine",
+      "iosFilter": "tp == 'enroute'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "ROUTE_LINE",
+        "line-width": 8
+      }
+    },
+    {
+      "id": "wogeomLine",
+      "iosFilter": "tp == 'wogeom'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "ROUTE_LINE",
+        "line-width": 8
+      }
+    },
+    {
+      "id": "holdingLine",
+      "iosFilter": "tp == 'holding'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "HOLD_LINE",
+        "line-width": 3
+      }
+    },
+    {
+      "id": "route-highlighted-line",
+      "iosFilter": "tp == 'highlighted'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLine",
+      "paint": {
+        "line-color": "ROUTE_LINE",
+        "line-width": 8
+      }
+    },
+    {
+      "id": "routeTRA_CENTER_LABEL_TWOWAY_NOOVERLAP",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 6.5,
+      "iosFilter": "isOneWay == 0 AND isOneLabel == 1",
+      "source-layer": "routeLine",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": false,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 8],
+        "icon-image": "tra_label_two_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL"
+      }
+    }, {
+      "id": "routeTRA_CENTER_LABEL_ONEWAY_NOOVERLAP",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 6.5,
+      "iosFilter": "isOneWay == 1 AND isOneLabel == 1",
+      "source-layer": "routeLine",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": false,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 20],
+        "icon-image": "tra_label_one_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL",
+      }
+    }, {
+      "id": "routeTRA_CENTER_LABEL_TWOWAY_OVERLAP",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "iosFilter": "isOneWay == 0 AND isOneLabel == 0",
+      "minzoom": 6.5,
+      "source-layer": "routeLine",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": false,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 8],
+        "icon-image": "tra_label_two_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL"
+      }
+    }, {
+      "id": "routeTRA_CENTER_LABEL_ONEWAY_OVERLAP",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 6.5,
+      "iosFilter": "isOneWay == 1 AND isOneLabel == 0",
+      "source-layer": "routeLine",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": false,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 20],
+        "icon-image": "tra_label_one_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL"
+      }
+    },
+    
+    {
+      "id": "routeNAV_ROOT",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "iosFilter": "table == 'Nav'",
+      "source-layer": "routeLine",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 1.0, 0.9, 4.5, 1.35],
+        "icon-image": [
+          "case",
+          ["==", ["get", "tp"], "DME_ROOT"], "dme<theme>",
+          ["==", ["get", "tp"], "VORDME_ROOT"], "vordme<theme>",
+          ["==", ["get", "tp"], "VOR_ROOT"], "vor<theme>",
+          ["==", ["get", "tp"], "VORTAC_ROOT"], "vortac<theme>",
+          ["==", ["get", "tp"], "NDB_ROOT"], "ndb<theme>",
+        ""],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1.0, 10, 8, 14, 9, 16, 11, 22],
+        "text-offset": [0, 1.5],
+        "text-anchor": "top",
+        "text-optional":true,
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-field": ["step", ["zoom"], "", 1.0, ["concat", ["get", "nm"], " ", ["get", "tf"]],
+          9, ["case", ["has", "nl_en"], ["concat", ["to-string", ["get", "nl_en"]], "\n", ["get", "nm"], " ", ["get", "tf"]],
+            ["concat", ["get", "nm"], " ", ["get", "tf"]]
+          ]
+        ]
+      },
+      "paint": {
+        "icon-opacity": ["get", "opacity"],
+        "text-opacity": ["get", "opacity"],
+        "text-color": "route_NAV",
+        "text-halo-color": "route_TEXT_HALO",
+        "text-halo-width": 1.5
+      }
+    },
+    
+    {
+      "id": "routeWPT_ROOT",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "source-layer": "routeLine",
+      "iosFilter": "table == 'Waypoint'",
+      "minzoom": 1.0,
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 1,
+        "icon-image": [
+          "case",
+          ["==", ["get", "tp"], "WPT_ON_REQUEST_ROOT"], "wpt_request<theme>",
+          ["==", ["get", "tp"], "WPT_COMPULSORY_ROOT"], "wpt_compulsory<theme>",
+          ["==", ["get", "tp"], "WPT_ON_REQUEST_SID"], "highlighted_blue_wpt_request<theme>",
+          ["==", ["get", "tp"], "WPT_COMPULSORY_SID"], "highlighted_blue_wpt_compulsory<theme>",
+          ["==", ["get", "tp"], "WPT_ON_REQUEST_STAR"], "highlighted_green_wpt_request<theme>",
+          ["==", ["get", "tp"], "WPT_COMPULSORY_STAR"], "highlighted_green_wpt_compulsory<theme>",
+        ""],
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-optional":true,
+        "text-offset": [0, 1],
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1.0, 12, 8, 14, 9, 16],
+        "text-field": [ "step", ["zoom"], "", 1.0, ["get", "nm"]],
+      },
+      "paint": {
+        "icon-opacity": ["get", "opacity"],
+        "text-opacity": ["get", "opacity"],
+        "text-color": "route_TPT",
+        "text-halo-color": "route_TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "routeLABEL-AH_ROOT",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "iosFilter": "tp == 'AH_ROOT'",
+      "source-layer": "routeLine",
+      "minzoom": 1.0,
+      "maxzoom": 12.0,
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 1.0, 0.9, 7, 1.2, 9, 1.35],
+        "icon-image": "routeAirport",
+        "text-allow-overlap": false,
+        "text-optional":true,
+        "text-anchor": "top",
+        "text-offset": [0, 1.3],
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1.0, 12, 7, 16, 9, 17],
+        "text-field": [
+          "step",
+          ["zoom"],
+          "",
+          1.0, ["get", "nm"],
+          8, ["format", ["get", "nm"], {}, ["concat", "\n", ["get", "nl_en"]], { "font-scale": 0.85 }],
+          11, ["get", "nm"]
+        ]
+      },
+      "paint": { "text-color": "route_ARP_LABEL", "text-halo-color": "route_TEXT_HALO", "text-halo-width": 1.2 }
+    },
+    {
+      "id": "baseProceduresLayer",
+      "mapFilter": "Route",
+      "iosFilter": "tp == 'X3'",
+      "type": "line",
+      "source-layer": "baseProceduresLayer"
+    },
+    {
+      "id": "baseSelectionLayer",
+      "mapFilter": "Route",
+      "iosFilter": "tp == 'X3'",
+      "type": "line",
+      "source-layer": "baseSelectionLayer"
+    }
+  ]
+}

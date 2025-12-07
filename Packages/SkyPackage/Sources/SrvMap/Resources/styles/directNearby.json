@@ -1,0 +1,82 @@
+{
+  "layers": [
+    {
+      "id": "directNearby-circle",
+      "type": "polygon_fill",
+      "iosFilter": "tp == 'circle'",
+      "minzoom": 1.0,
+      "maxzoom": 10.0,
+      "source-layer": "directNearby",
+      "paint": {
+        "fill-color": "directnearby_circle",
+        "fill-opacity": 0.15
+      }
+    },
+    {
+      "id": "directNearby",
+      "minzoom": 1.0,
+      "type": "line",
+      "iosFilter": "tp != 'circle'",
+      "source-layer": "directNearby",
+      "paint": {
+        "line-dasharray": [1.2,0.5],
+        "line-color": "directnearby_line",
+        "line-width": 5
+      }
+    },
+    {
+      "id": "directNearbyLabel",
+      "type": "symbol",
+      "iosFilter": "tp == 'course'",
+      "minzoom": 3.5,
+      "source-layer": "directNearby",
+      "layout": {
+        "text-offset": [0.1, 0],
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": false,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 11],
+        "icon-image": "directto_label_one_way"
+      },
+      "paint": {
+        "text-color": "directto_label"
+      }
+    },
+    {
+      "id": "directNearby_ARP",
+      "type": "symbol",
+      "iosFilter": "tp == 'AH'",
+      "source-layer": "directNearby",
+      "minzoom": 1.0,
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 1.0, 0.9, 7, 1.2, 9, 1.35],
+        "icon-image": "altsAirport",
+        "text-allow-overlap": false,
+        "text-optional":true,
+        "text-anchor": "top",
+        "text-offset": [0, 1.3],
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1.0, 12, 7, 16, 9, 17],
+        "text-field": [
+          "step",
+          ["zoom"],
+          "",
+          4.5, ["get", "nm"],
+          8, ["format", ["get", "nm"], {}, ["concat", "\n", ["get", "nl_en"]], { "font-scale": 0.75 }],
+          11, ["get", "nm"]
+        ]
+      },
+      "paint": { "text-color": "route_ARP_LABEL", "text-halo-color": "route_TEXT_HALO", "text-halo-width": 1.2 }
+    }
+  ]
+}

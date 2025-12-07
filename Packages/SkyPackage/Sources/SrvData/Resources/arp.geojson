@@ -1,0 +1,71 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          101.698608,
+          56.370556
+        ],
+        "type": "Point"
+      },
+      "id": "ARP37143",
+      "properties": {
+        "country": "Russian Federation",
+        "elevation": {
+          "unit": "ft",
+          "value": 1611
+        },
+        "iata": "BTK",
+        "icao": "UIBB",
+        "name": "BRATSK",
+        "timeZone": "UTC+8"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          30.262497,
+          59.800278
+        ],
+        "type": "Point"
+      },
+      "id": "ARP37158",
+      "properties": {
+        "country": "Russian Federation",
+        "elevation": {
+          "unit": "ft",
+          "value": 79
+        },
+        "iata": "LED",
+        "icao": "ULLI",
+        "name": "SANKT-PETERBURG/PULKOVO",
+        "timeZone": "UTC+3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          28.751944,
+          41.275278
+        ],
+        "type": "Point"
+      },
+      "id": "ARP6014443",
+      "properties": {
+        "country": "Turkiye",
+        "elevation": {
+          "unit": "ft",
+          "value": 325
+        },
+        "iata": "IST",
+        "icao": "LTFM",
+        "name": "ISTANBUL/YENI HAVALIMANI",
+        "timeZone": "UTC+3"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

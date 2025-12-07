@@ -1,0 +1,72 @@
+{
+  "layers": [
+    {
+      "id": "AP_WPT",
+      "type": "symbol",
+      "insertAfterId": "hiddenLine",
+      "minzoom": 5,
+      "mapFilter": "Route",
+      "iosFilter": "table == 'Waypoint'",
+      "source-layer": "airportPoints",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-offset": [0, 1.5],
+        "text-optional":true,
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1, 0, 5.5, 12, 8, 14, 9, 16],
+        "text-field": [
+          "step",
+          ["zoom"],
+          "",
+          5.5, ["get", "nm"],
+          6.0, ["format", ["get", "nm"], {}, ["concat", "\n", ["get", "nl_en"]], { "font-scale": 0.75 }],
+          11, ["get", "nm"]
+        ],
+        "icon-allow-overlap": true,
+        "icon-image": [
+          "case",
+          ["==", ["get", "tp"], "WPT_ON_REQUEST_SID"], "highlighted_blue_wpt_request<theme>",
+          ["==", ["get", "tp"], "WPT_COMPULSORY_SID"], "highlighted_blue_wpt_compulsory<theme>",
+          ["==", ["get", "tp"], "WPT_ON_REQUEST_STAR"], "highlighted_green_wpt_request<theme>",
+          ["==", ["get", "tp"], "WPT_COMPULSORY_STAR"], "highlighted_green_wpt_compulsory<theme>",
+        ""],
+      },
+      "paint": {
+        "text-color": "route_TPT",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "AP_ARP",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "iosFilter": "table == 'Arp'",
+      "minzoom": 1.0,
+      "maxzoom": 10.0,
+      "source-layer": "airportPoints",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 1.0, 0.9, 7, 1.2, 9, 1.35],
+        "icon-image": "routeAirport",
+        "text-allow-overlap": true,
+        "text-anchor": "top",
+        "text-offset": [0, 1.3],
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1.0, 12, 7, 16, 9, 17],
+        "text-field": [
+          "step",
+          ["zoom"],
+          "",
+          1.0, ["get", "nm"],
+          8, ["format", ["get", "nm"], {}, ["concat", "\n", ["get", "nl_en"]], { "font-scale": 0.85 }],
+          11, ["get", "nm"]
+        ]
+      },
+      "paint": { "text-color": "route_ARP_LABEL", "text-halo-color": "TEXT_HALO", "text-halo-width": 1.2 }
+    },
+  ]
+}
+

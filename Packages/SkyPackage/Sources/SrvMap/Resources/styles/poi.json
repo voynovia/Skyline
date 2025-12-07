@@ -1,0 +1,27 @@
+{
+  "layers": [
+    {
+      "id": "savedpoi",
+      "type": "symbol",
+      "insertAfterId": "routeBottomLayer-dim",
+      "minzoom": 6.5,
+      "source-layer": "savedpoi",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-offset": [0, 1.5],
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6.5, 12, 8, 14, 9, 16],
+        "text-field": [ "step", ["zoom"], "", 6.5, ["to-string", ["get", "nm"]] ],
+        "icon-allow-overlap": true,
+        "icon-size": [ "interpolate", ["linear"], ["zoom"], 6.5, 0.3, 9, 1.25 ],
+        "icon-image": "poi"
+      },
+      "paint": {
+        "text-color": "TPT",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "layers": [
+    {
+      "id": "airportsWcharts_CIVIL",
+      "type": "symbol",
+      "minzoom": 2.5,
+      "maxzoom": 8.9,
+      "source-layer": "airports",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 2.5, 0.3, 5, 0.8, 7, 1.2, 9, 1.45],
+        "icon-image": "airport"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "layers": [
+    {
+      "id": "airfield-TWYs",
+      "type": "fill",
+      "source-layer": "TWYs",
+      "layout": {},
+      "paint": {"fill-color": "grid_line", "fill-outline-color": "grid_line"}
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "Arp",
+    "type": "point",
+    "zoom": 3
+  },
+  {
+    "id": "Waypoint",
+    "type": "point",
+    "zoom": 6.5
+  },
+  {
+    "id": "HoldingPattern",
+    "type": "point",
+    "zoom": 6.5
+  },
+  {
+    "id": "Navaid",
+    "type": "point",
+    "zoom": 6.5
+  },
+  {
+    "id": "FIR",
+    "type": "airspace",
+    "zoom": 1
+  },
+  {
+    "id": "UIR",
+    "type": "airspace",
+    "zoom": 1
+  },
+  {
+    "id": "FIR/UIR",
+    "type": "airspace",
+    "zoom": 1
+  },
+  {
+    "id": "SECTOR",
+    "type": "airspace",
+    "zoom": 4
+  },
+  {
+    "id": "CTA",
+    "type": "airspace",
+    "zoom": 1
+  },
+  {
+    "id": "TMA",
+    "type": "airspace",
+    "zoom": 1
+  },
+  {
+    "id": "RMA",
+    "type": "airspace",
+    "zoom": 6
+  },
+  {
+    "id": "CTR",
+    "type": "airspace",
+    "zoom": 7.5
+  },
+  {
+    "id": "CTB",
+    "type": "airspace",
+    "zoom": 7.5
+  },
+  {
+    "id": "CTC",
+    "type": "airspace",
+    "zoom": 7.5
+  },
+  {
+    "id": "RSA",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "DANGER",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "PROHIBITED",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "RESTRICTED",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "TRAINING",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "UNSPECIFIED",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "MILITARY",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "WARNING",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "ALERT",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "CAUTION",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "ARTILLERY",
+    "type": "airspace",
+    "zoom": 8
+  },
+  {
+    "id": "ZOV",
+    "type": "airspace",
+    "zoom": 3
+  },
+]

@@ -1,0 +1,255 @@
+{
+  "layers": [
+    {
+      "id": "p_sid_msa_line",
+      "type": "line",
+      "insertAfterId": "baseProceduresLayer",
+      "iosFilter": "msaId != null && tp != 'sid'",
+      "minzoom": 3.0,
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "paint": {
+        "line-color": "msa_line",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "p_sid_line",
+      "minzoom": 3.0,
+      "type": "line",
+      "iosFilter": "msaId == null && tp != 'sid'",
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "paint": {
+        "line-color": "proc_line",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "p_wo_sid_line",
+      "minzoom": 3.0,
+      "type": "line",
+      "iosFilter": "tp == 'sid'",
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "paint": {
+        "line-dasharray": [1,1],
+        "line-color": "proc_sid_line",
+        "line-width": 6
+      }
+    },
+    
+    {
+      "id": "p_sid_distance_msa_text",
+      "type": "symbol",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "iosFilter": "msaId != null && altitude1 == null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 21],
+        "symbol-placement": "line-center",
+        "text-anchor": "center",
+        "text-field": "{distance}",
+        "text-font": ["Open Sans Bold"],
+        "text-offset": [0, 0.7],
+        "text-max-angle": 30,
+      },
+      "paint": {
+        "text-color": "msa_line",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_sid_bearing_msa_text",
+      "type": "symbol",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "iosFilter": "msaId != null && altitude1 == null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 21],
+        "symbol-placement": "line-center",
+        "text-anchor": "center",
+        "text-field": "{bearing}",
+        "text-font": ["Open Sans Bold"],
+        "text-offset": [0, 0.55],
+        "text-max-angle": 30,
+      },
+      "paint": {
+        "text-color": "msa_line",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_sid_mora1_text",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 6.0,
+      "iosFilter": "msaId != null && altitude1 != null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-offset": [0, 0.27],
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-font": ["Open Sans SemiBold Italic"],
+        "text-field": [
+          "format",
+          ["get", "altitude1"], { "font-scale": 1.2 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "altitude1"]], 9], "#cf8c82", "#bda6ad" ],
+        "text-halo-color": "TEXT_HALO",
+        "text-anchor": "right",
+        "text-halo-width": 1.2,
+        "text-size": 29,
+      }
+    },
+    {
+      "id": "p_sid_mora2_text",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 6.0,
+      "iosFilter": "msaId != null && altitude2 != null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-offset": [0.1, 0.0],
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-font": ["Open Sans SemiBold Italic"],
+        "text-field": [
+          "format",
+          ["get", "altitude2"], { "font-scale": 1.0 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "altitude1"]], 9], "#cf8c82", "#bda6ad" ],
+        "text-halo-color": "TEXT_HALO",
+        "text-anchor": "left",
+        "text-halo-width": 1.2,
+        "text-size": 29,
+      }
+    },
+    
+    {
+      "id": "p_sid_proc_arrow",
+      "type": "symbol",
+      "minzoom": 8,
+      "mapFilter": "Route",
+      "iosFilter": "arrowAngle != null",
+      "source-layer": "procedure",
+      "layout": {
+        "icon-ignore-placement":false,
+        "icon-allow-overlap": false,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 6.0, 1.0],
+        "icon-image": "proc_arrow",
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "arrowAngle"]],
+      }
+    },
+    {
+      "id": "p_sid_nav_bearing",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "iosFilter": "bearing != null && msaId == nil",
+      "minzoom": 6.0,
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6.9, 0, 7.0, 5, 7.1, 6.5, 7.2, 8, 7.35, 10, 7.5, 12, 8.5, 15, 9.2, 21],
+        "text-offset": [0, 0.25],
+        "text-anchor": "top",
+        "text-allow-overlap": true,
+        "text-font": ["Open Sans Regular"],
+        "text-field": "{bearing}",
+        "text-rotation-alignment": "map",
+        "text-rotate":["to-number", ["get", "labelAngle"]],
+      },
+      "paint": {
+        "text-color": "proc_text",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_sid_nav_distance",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "iosFilter": "distance != null && msaId == nil",
+      "minzoom": 6.0,
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6.9, 0, 7.0, 5, 7.1, 6.5, 7.2, 8, 7.35, 10, 7.5, 12, 8.5, 14, 9.2, 17],
+        "text-offset": [0, -0.19],
+        "text-anchor": "bottom",
+        "text-allow-overlap": true,
+        "text-font": ["Open Sans Regular"],
+        "text-field": ["to-string", ["get", "distance"]],
+        "text-rotation-alignment": "map",
+        "text-rotate":["to-number", ["get", "labelAngle"]],
+      },
+      "paint": {
+        "text-color": "proc_text",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    
+    {
+      "id": "p_sid_point_object",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "source-layer": "procedure",
+      "layout": {
+        "text-optional": true,
+        "text-field": [
+          "format",
+          ["get", "ident"], { "font-scale": 1.4, "text-color": "&proc_text" },
+          ["case", ["!=", ["get", "freq"], null], ["concat", "\n", ["get", "freq"]], ""], { "text-color": "&proc_freq", "font-scale": 1.05 },
+          ["case", ["==", ["get", "below"], 1], "\n===============", ""], { "text-color": "&proc_alt", "font-scale": 0.37 },
+          ["case", ["!=", ["get", "alt1"], null], ["concat", "\n", ["get", "alt1"]], ""], { "text-color": "&proc_alt" },
+          ["case", ["!=", ["get", "alt2"], null], ["concat", "\n", ["get", "alt2"]], ""], { "text-color": "&proc_alt" },
+          ["case", ["==", ["get", "above"], 1], "\n===============", ""], { "text-color": "&proc_alt", "font-scale": 0.37 },
+          ["case", ["!=", ["get", "spd"], null], ["concat", "\n", ["get", "spd"]], ""], { "text-color": "#be5f13" },
+          ["case", ["!=", ["get", "bank"], null], ["concat", "\n", ["get", "bank"]], ""], { "text-color": "&proc_text" },
+        ],
+        "text-variable-anchor": ["top-left", "bottom-left", "top-right", "bottom-right", "top", "bottom", "left", "right"],
+        "text-radial-offset": 0.5,
+        "text-allow-overlap": true,
+        "text-justify": "auto",
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6.9, 0, 7.0, 5, 7.1, 6.5, 7.2, 8, 7.35, 10, 7.5, 12, 8.5, 14, 9.2, 20],
+        "icon-size": [ "interpolate", ["linear"], ["zoom"], 5.9, 0, 6.0, 1.1],
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-image": [
+          "case",
+          ["==", ["get", "image"], 21], "proc_wpt_crp_fly_by<theme>",
+          ["==", ["get", "image"], 22], "proc_wpt_crp_fly_over<theme>",
+          ["==", ["get", "image"], 23], "proc_wpt_non_crp_fly_by<theme>",
+          ["==", ["get", "image"], 24], "proc_wpt_non_crp_fly_over<theme>",
+          ["==", ["get", "image"], 12], "proc_point<theme>",
+          
+          ["==", ["get", "image"], 2], "dme<theme>",
+          ["==", ["get", "image"], 3], "dme<theme>",
+          ["==", ["get", "image"], 4], "wpt_compulsory<theme>",
+          ["==", ["get", "image"], 5], "wpt_request<theme>",
+          ["==", ["get", "image"], 8], "ndb<theme>",
+          ["==", ["get", "image"], 9], "ndb<theme>",
+          ["==", ["get", "image"], 10], "ndb<theme>",
+          ["==", ["get", "image"], 11], "vor<theme>",
+          ["==", ["get", "image"], 13], "tacan<theme>",
+          ["==", ["get", "image"], 14], "tacan<theme>",
+          ["==", ["get", "image"], 15], "vor<theme>",
+          ["==", ["get", "image"], 16], "vor<theme>",
+          ["==", ["get", "image"], 17], "vordme<theme>",
+          ["==", ["get", "image"], 18], "vordme<theme>",
+        ""]
+      },
+      "paint": {
+        "text-color": "proc_text",
+        "text-halo-color": "route_TEXT_HALO",
+        "text-halo-width": 1.0
+      }
+    },
+  ]
+}

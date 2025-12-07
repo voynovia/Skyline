@@ -1,0 +1,333 @@
+{
+  "layers": [
+    {
+      "id": "p_app_msa_line",
+      "type": "line",
+      "insertAfterId": "baseProceduresLayer",
+      "iosFilter": "msaId != null",
+      "minzoom": 3.0,
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "paint": {
+        "line-color": "msa_line",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "p_app_distance_msa_text",
+      "type": "symbol",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "iosFilter": "msaId != null && altitude1 == null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 21],
+        "symbol-placement": "line-center",
+        "text-anchor": "center",
+        "text-field": "{distance}",
+        "text-font": ["Open Sans Bold"],
+        "text-offset": [0, 0.7],
+        "text-max-angle": 30,
+      },
+      "paint": {
+        "text-color": "msa_line",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_app_bearing_msa_text",
+      "type": "symbol",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "iosFilter": "msaId != null && altitude1 == null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 21],
+        "symbol-placement": "line-center",
+        "text-anchor": "center",
+        "text-field": "{bearing}",
+        "text-font": ["Open Sans Bold"],
+        "text-offset": [0, 0.55],
+        "text-max-angle": 30,
+      },
+      "paint": {
+        "text-color": "msa_line",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_app_mora1_text",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 6.0,
+      "iosFilter": "msaId != null && altitude1 != null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-offset": [0, 0.27],
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-font": ["Open Sans SemiBold Italic"],
+        "text-field": [
+          "format",
+          ["get", "altitude1"], { "font-scale": 1.2 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "altitude1"]], 9], "#cf8c82", "#bda6ad" ],
+        "text-halo-color": "TEXT_HALO",
+        "text-anchor": "right",
+        "text-halo-width": 1.2,
+        "text-size": 29,
+      }
+    },
+    {
+      "id": "p_app_mora2_text",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 6.0,
+      "iosFilter": "msaId != null && altitude2 != null",
+      "source-layer": "procedure",
+      "layout": {
+        "text-offset": [0.1, 0.0],
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-font": ["Open Sans SemiBold Italic"],
+        "text-field": [
+          "format",
+          ["get", "altitude2"], { "font-scale": 1.0 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "altitude1"]], 9], "#cf8c82", "#bda6ad" ],
+        "text-halo-color": "TEXT_HALO",
+        "text-anchor": "left",
+        "text-halo-width": 1.2,
+        "text-size": 29,
+      }
+    },
+    
+    
+    {
+      "id": "p_app_line",
+      "minzoom": 5.0,
+      "mapFilter": "Route",
+      "type": "line",
+      "iosFilter": "routeType != 'Z' && msaId == null",
+      "source-layer": "procedure",
+      "paint": {
+        "line-color": "proc_line",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "p_app_line_z",
+      "minzoom": 5.0,
+      "mapFilter": "Route",
+      "iosFilter": "routeType == 'Z' && msaId == null",
+      "type": "line",
+      "source-layer": "procedure",
+      "paint": {
+        "line-color": "proc_line_z",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "p_app_proc_arrow",
+      "type": "symbol",
+      "minzoom": 6,
+      "mapFilter": "Route",
+      "iosFilter": "arrowAngle != null && msaId == null",
+      "source-layer": "procedure",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 6.0, 1.0],
+        "icon-image": [
+          "case",
+          ["==", ["get", "isRouteZ"], 1], "proc_arrow_z<theme>",
+          "proc_arrow<theme>"
+        ],
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "arrowAngle"]],
+      }
+    },
+    {
+      "id": "p_app_nav_bearing",
+      "type": "symbol",
+      "iosFilter": "(bearing != null) && (isRouteZ == null) && (msaId == null)",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 21],
+        "text-offset": [0, 0.17],
+        "text-anchor": "top",
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Regular"],
+        "text-field": ["to-string", ["get", "bearing"]],
+        "text-rotation-alignment": "map",
+        "text-rotate":["to-number", ["get", "labelAngle"]],
+      },
+      "paint": {
+        "text-color": "proc_text",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_app_z_nav_bearing",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "iosFilter": "(bearing != null) && (isRouteZ == 1)  && (msaId == null)",
+      "minzoom": 6.0,
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 21],
+        "text-offset": [0, 0.17],
+        "text-anchor": "top",
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Regular"],
+        "text-field": ["to-string", ["get", "bearing"]],
+        "text-rotation-alignment": "map",
+        "text-rotate":["to-number", ["get", "labelAngle"]],
+      },
+      "paint": {
+        "text-color": "proc_line_z",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_app_nav_distance",
+      "type": "symbol",
+      "iosFilter": "(distance != null) && (isRouteZ == null) && (msaId == null)",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 17],
+        "text-offset": [0, -0.1],
+        "text-anchor": "bottom",
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Regular"],
+        "text-field": ["to-string", ["get", "distance"]],
+        "text-rotation-alignment": "map",
+        "text-rotate":["to-number", ["get", "labelAngle"]],
+      },
+      "paint": {
+        "text-color": "proc_text",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "p_app_z_nav_distance",
+      "type": "symbol",
+      "iosFilter": "distance != null && isRouteZ == 1 && msaId == null",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "layout": {
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 12, 8.5, 17],
+        "text-offset": [0, -0.1],
+        "text-anchor": "bottom",
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Regular"],
+        "text-field": ["to-string", ["get", "distance"]],
+        "text-rotation-alignment": "map",
+        "text-rotate":["to-number", ["get", "labelAngle"]],
+      },
+      "paint": {
+        "text-color": "proc_line_z",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    
+    {
+      "id": "p_app_object",
+      "type": "symbol",
+      "iosFilter": "isRouteZ != 1 && msaId == null",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "layout": {
+        "text-optional": false,
+        "text-field": [
+          "format",
+          ["get", "ident"], { "font-scale": 1.0, "text-color": "&proc_text" },
+          ["case", ["==", ["get", "below"], 1], "\n______", ""], { "text-color": "&proc_alt", "font-scale": 1.15 },
+          ["case", ["!=", ["get", "alt1"], null], ["concat", "\n", ["get", "alt1"]], ""], { "text-color": "&proc_alt" },
+          ["case", ["!=", ["get", "alt2"], null], ["concat", "\n", ["get", "alt2"]], ""], { "text-color": "&proc_alt" },
+          ["case", ["==", ["get", "above"], 1], "\n¯¯¯¯¯¯", ""], { "text-color": "&proc_alt", "font-scale": 0.9 },
+          ["case", ["!=", ["get", "spd"], null], ["concat", "\n", ["get", "spd"]], ""], { "text-color": "#be5f13" },
+          ["case", ["!=", ["get", "bank"], null], ["concat", "\n", ["get", "bank"]], ""], { "text-color": "&proc_text" },
+        ],
+        "text-variable-anchor": ["top-left", "bottom-left", "top-right", "bottom-right", "top", "bottom", "left", "right"],
+        "text-radial-offset": 0.5,
+        "text-allow-overlap": true,
+        "text-justify": "auto",
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 10, 7.5, 12, 8.5, 14, 9.2, 20],
+        "icon-size": [ "interpolate", ["linear"], ["zoom"], 6.0, 1.1],
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-image": [
+          "case",
+          ["==", ["get", "image"], 21], "proc_wpt_crp_fly_by<theme>",
+          ["==", ["get", "image"], 22], "proc_wpt_crp_fly_over<theme>",
+          ["==", ["get", "image"], 23], "proc_wpt_non_crp_fly_by<theme>",
+          ["==", ["get", "image"], 24], "proc_wpt_non_crp_fly_over<theme>",
+          ["==", ["get", "image"], 12], "proc_point<theme>",
+        ""]
+      },
+      "paint": {
+        "text-color": "proc_text",
+        "text-halo-color": "route_TEXT_HALO",
+        "text-halo-width": 1.0
+      }
+    },
+    
+    {
+      "id": "p_app_z_object",
+      "type": "symbol",
+      "iosFilter": "isRouteZ == 1 && msaId == null",
+      "minzoom": 6.0,
+      "mapFilter": "Route",
+      "source-layer": "procedure",
+      "layout": {
+        "text-optional": false,
+        "text-field": [
+          "format",
+          ["get", "ident"], { "font-scale": 1.0, "text-color": "&proc_line_z" },
+          ["case", ["==", ["get", "below"], 1], "\n===============", ""], { "text-color": "&proc_alt", "font-scale": 0.37 },
+          ["case", ["!=", ["get", "alt1"], null], ["concat", "\n", ["get", "alt1"]], ""], { "text-color": "&proc_line_z" },
+          ["case", ["!=", ["get", "alt2"], null], ["concat", "\n", ["get", "alt2"]], ""], { "text-color": "&proc_line_z" },
+          ["case", ["==", ["get", "above"], 1], "\n===============", ""], { "text-color": "&proc_alt", "font-scale": 0.37 },
+          ["case", ["!=", ["get", "spd"], null], ["concat", "\n", ["get", "spd"]], ""], { "text-color": "&proc_line_z" },
+          ["case", ["!=", ["get", "bank"], null], ["concat", "\n", ["get", "bank"]], ""], { "text-color": "&proc_line_z" },
+        ],
+        "text-variable-anchor": ["top-left", "bottom-left", "top-right", "bottom-right", "top", "bottom", "left", "right"],
+        "text-radial-offset": 0.5,
+        "text-allow-overlap": true,
+        "text-justify": "auto",
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 6, 10, 7.5, 12, 8.5, 14, 9.2, 20],
+        "icon-size": [ "interpolate", ["linear"], ["zoom"], 6.0, 1.1],
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-image": [
+          "case",
+          ["==", ["get", "image"], 21], "proc_wpt_crp_fly_by<theme>",
+          ["==", ["get", "image"], 22], "proc_wpt_crp_fly_over<theme>",
+          ["==", ["get", "image"], 23], "proc_wpt_non_crp_fly_by<theme>",
+          ["==", ["get", "image"], 24], "proc_wpt_non_crp_fly_over<theme>",
+          ["==", ["get", "image"], 12], "proc_point<theme>",
+        ""]
+      },
+      "paint": {
+        "text-color": "proc_line_z",
+        "text-halo-color": "route_TEXT_HALO",
+        "text-halo-width": 1.0
+      }
+    },
+  ]
+}

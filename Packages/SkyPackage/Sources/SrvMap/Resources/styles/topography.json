@@ -1,0 +1,83 @@
+{
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "background"
+      }
+    },
+    {
+      "id": "land_polygon",
+      "type": "fill",
+      "minzoom": 1.0,
+      "maxzoom": 20.2,
+      "source-layer": "land_polygon",
+      "layout": {},
+      "paint": {"fill-color": "land", "fill-outline-color": "water_outline"}
+    },
+    {
+      "id": "island_polygon",
+      "type": "fill",
+      "minzoom": 1.0,
+      "maxzoom": 20.2,
+      "source-layer": "island_polygon",
+      "layout": {},
+      "paint": {"fill-color": "land", "fill-outline-color": "water_outline"}
+    },
+    {
+      "id": "water_polygon",
+      "type": "fill",
+      "minzoom": 1.0,
+      "maxzoom": 20.2,
+      "source-layer": "water_polygon",
+      "layout": {},
+      "paint": {"fill-color": "background"}
+    },
+    {
+      "id": "water_line",
+      "type": "line",
+      "minzoom": 1.0,
+      "maxzoom": 20.0,
+      "source-layer": "water_line",
+      "paint": {
+        "line-color": "background",
+        "line-opacity": ["interpolate", ["linear"], ["zoom"], 0, 0.2, 10, 1],
+        "line-width": 2.0
+      }
+    },
+    {
+      "id": "city",
+      "type": "symbol",
+      "mapFilter": "CITY",
+      "source-layer": "city",
+      "minzoom": 3.0,
+      "maxzoom": 4.0,
+      "layout": {
+        "text-field": ["to-string", ["get", "name_en"]],
+        "text-letter-spacing": 0.03,
+        "text-size": 15.0,
+        "text-font": ["Open Sans Regular"]
+      },
+      "paint": {
+        "text-color": "city"
+      }
+    }, {
+      "id": "country-label",
+      "type": "symbol",
+      "source-layer": "country",
+      "iosFilter": "name_en != 'Kosovo' && name_en != 'Nagorno-Karabakh Republic' && name_en != 'South Ossetia'",
+      "maxzoom": 3.5,
+      "layout": {
+        "text-opacity": [ "interpolate", ["linear"],["zoom"], 3.0, 1.0, 3.5, 0.0 ],
+        "text-field": ["to-string", ["get", "name_en"]],
+        "text-size": 16.0,
+        "text-font": ["Open Sans SemiBold"]
+      },
+      "paint": {
+        "text-color": "country_label",
+        "text-halo-color": "topo_halo"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "layers": [
+    {
+      "id": "routeLinkShadowLine",
+      "iosFilter": "tp == 'shadow'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "insertAfterId": "routeBottomLayer-dim",
+      "source-layer": "routeLinkLines",
+      "paint": {
+        "line-color": "shadow_line",
+        "line-width": 8
+      }
+    },
+    {
+      "id": "routeLinkLine",
+      "iosFilter": "tp == 'enroute'",
+      "mapFilter": "Route",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "routeLinkLines",
+      "paint": {
+        "line-color": "ROUTE_LINE",
+        "line-width": 8
+      }
+    },
+  ]
+}
+

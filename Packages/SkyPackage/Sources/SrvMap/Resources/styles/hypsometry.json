@@ -1,0 +1,253 @@
+{
+  "layers": [
+    {
+      "id": "G--2000",
+      "type": "polygon_fill",
+      "insertAfterId": "island",
+      "mapFilter": "Terrain",
+      "source-layer": "-2000",
+      "layout": {},
+      "paint": {"fill-color": "-2000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G--1000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "-1000",
+      "layout": {},
+      "paint": {"fill-color": "-1000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-0",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "0",
+      "layout": {},
+      "paint": {"fill-color": "0", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-1000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "1000",
+      "layout": {},
+      "paint": {"fill-color": "1000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-2000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "2000",
+      "layout": {},
+      "paint": {"fill-color": "2000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-3000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "3000",
+      "layout": {},
+      "paint": {"fill-color": "3000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-4000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "4000",
+      "layout": {},
+      "paint": {"fill-color": "4000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-5000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "5000",
+      "layout": {},
+      "paint": {"fill-color": "5000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-6000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "6000",
+      "layout": {},
+      "paint": {"fill-color": "6000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-7000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "7000",
+      "layout": {},
+      "paint": {"fill-color": "7000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-8000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "8000",
+      "layout": {},
+      "paint": {"fill-color": "8000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-9000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "9000",
+      "layout": {},
+      "paint": {"fill-color": "9000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-10000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "10000",
+      "layout": {},
+      "paint": {"fill-color": "10000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-11000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "11000",
+      "layout": {},
+      "paint": {"fill-color": "11000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-12000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "12000",
+      "layout": {},
+      "paint": {"fill-color": "12000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-13000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "14000",
+      "layout": {},
+      "paint": {"fill-color": "14000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-15000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "15000",
+      "layout": {},
+      "paint": {"fill-color": "16000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-17000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "17000",
+      "layout": {},
+      "paint": {"fill-color": "17000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-18000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "000",
+      "layout": {},
+      "paint": {"fill-color": "18000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-19000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "19000",
+      "layout": {},
+      "paint": {"fill-color": "19000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-20000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "20000",
+      "layout": {},
+      "paint": {"fill-color": "20000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-21000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "21000",
+      "layout": {},
+      "paint": {"fill-color": "21000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-22000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "22000",
+      "layout": {},
+      "paint": {"fill-color": "22000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-23000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "23000",
+      "layout": {},
+      "paint": {"fill-color": "23000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-24000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "24000",
+      "layout": {},
+      "paint": {"fill-color": "24000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-25000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "25000",
+      "layout": {},
+      "paint": {"fill-color": "25000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-26000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "26000",
+      "layout": {},
+      "paint": {"fill-color": "26000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-27000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "27000",
+      "layout": {},
+      "paint": {"fill-color": "27000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-28000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "28000",
+      "layout": {},
+      "paint": {"fill-color": "28000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-29000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "29000",
+      "layout": {},
+      "paint": {"fill-color": "29000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    },
+    {
+      "id": "G-30000",
+      "type": "polygon_fill",
+      "mapFilter": "Terrain",
+      "source-layer": "30000",
+      "layout": {},
+      "paint": {"fill-color": "30000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.35 ]}
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "layers": [
+    {
+      "id": "routeFIR",
+      "iosFilter": "tp == 'FIR'",
+      "type": "line",
+      "insertAfterId": "upperDimmedAirspaces",
+      "mapFilter": "Route",
+      "paint": {
+        "line-color": "route_fir",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"], 2.5, 2, 5, 4
+        ],
+        "line-opacity": [ "interpolate", ["linear"],["zoom"], 2.5, 0.6, 4.0, 1.0 ]
+      }
+    }, {
+      "id": "routeFIRUIR",
+      "iosFilter": "tp == 'FIR/UIR'",
+      "type": "line",
+      "mapFilter": "Route",
+      "paint": {
+        "line-color": "route_fir",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"], 2.5, 2, 5, 4
+        ],
+        "line-opacity": [ "interpolate", ["linear"],["zoom"], 2.5, 0.6, 4.0, 1.0 ]
+      }
+    }, {
+      "id": "routeUIR",
+      "iosFilter": "tp == 'UIR'",
+      "type": "line",
+      "mapFilter": "Route",
+      "paint": {
+        "line-color": "route_fir",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"], 2.5, 2, 5, 4
+        ],
+        "line-opacity": [ "interpolate", ["linear"],["zoom"], 2.5, 0.6, 4.0, 1.0 ]
+      }
+    }, {
+      "id": "routeSECTOR",
+      "iosFilter": "tp == 'SECTOR'",
+      "type": "line",
+      "mapFilter": "Route",
+      "minzoom": 4,
+      "paint": {
+        "line-color": "route_sector",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"], 4, 2.5, 6, 3
+        ],
+        "line-dasharray": [5 ,5],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],["zoom"], 4, 0.01, 5.0, 1.0
+        ]
+      }
+    }, {
+      "id": "routeCTA-BUFFER",
+      "iosFilter": "tp == 'CTA'",
+      "type": "line",
+      "mapFilter": "Route",
+      "minZoom": 2.5,
+      "source-layer": "routeCTA",
+      "paint": {
+        "line-color": "route_cta",
+        "line-offset": 4,
+        "line-width": 10,
+        "line-opacity": [ "interpolate",["linear"],["zoom"], 2.5, 0.0, 4, 0.15]
+      }
+    }, {
+      "id": "routeCTA",
+      "iosFilter": "tp == 'CTA'",
+      "type": "line",
+      "mapFilter": "Route",
+      "minZoom": 2.5,
+      "source-layer": "routeCTA",
+      "paint": {
+        "line-color": "route_cta",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"], 2.5, 3
+        ],
+        "line-opacity": ["interpolate", ["linear"],["zoom"], 2.5, 0.0, 4, 1.0]
+      }
+    }, {
+      "id": "routeTMA-BUFFER",
+      "iosFilter": "tp == 'TMA'",
+      "type": "line",
+      "mapFilter": "Route",
+      "source-layer": "routeTMA",
+      "minZoom": 2.5,
+      "paint": {
+        "line-color": "route_tma",
+        "line-offset": 4,
+        "line-width": 12,
+        "line-opacity": ["interpolate",["linear"],["zoom"], 2.5, 0.00, 4, 0.15]
+      }
+    },{
+      "id": "routeTMA",
+      "iosFilter": "tp == 'TMA'",
+      "type": "line",
+      "mapFilter": "Route",
+      "source-layer": "routeTMA",
+      "minZoom": 2.5,
+      "paint": {
+        "line-color": "route_tma",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2.5, 2],
+        "line-opacity": ["interpolate",["linear"],["zoom"], 2.5, 0.0, 4, 1.0]
+      }
+    },
+    {
+      "id": "routeRMA",
+      "type": "line",
+      "iosFilter": "tp == 'RMA'",
+      "mapFilter": "Route",
+      "source-layer": "routeRMA",
+      "minZoom": 2.5,
+      "maxZoom": 12,
+      "paint": {
+        "line-color": "RMA",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 2.5, 1, 6, 2],
+        "line-dasharray": [5,4],
+        "line-opacity": ["interpolate",["linear"],["zoom"], 2.5, 0.0, 4, 1.0]
+      }
+    },
+    {
+      "id": "routeRMA_LABEL",
+      "type": "symbol",
+      "iosFilter": "tp == 'RMA'",
+      "mapFilter": "Route",
+      "source-layer": "routeRMA",
+      "minzoom": 9,
+      "maxZoom": 12,
+      "layout": {
+        "text-allow-overlap": true,
+        "text-field": "{nm}\n{lowerLimit}'",
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 9, 14, 12, 18]
+      },
+      "paint": {
+        "text-color": "RMA",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2,
+      }
+    },
+    {
+      "id": "routeCTR",
+      "iosFilter": "tp == 'CTR'",
+      "type": "line",
+      "mapFilter": "Route",
+      "source-layer": "routeCTR",
+      "minZoom": 2.5,
+      "paint": {
+        "line-color": "route_ctr",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"], 7.5, 2
+        ],
+        "line-dasharray": [5,3],
+        "line-opacity": ["interpolate",["linear"],["zoom"], 2.5, 0.0, 4.0, 1.0]
+      }
+    }, {
+      "id": "routeRSA-BUFFER",
+      "iosFilter": "tp == 'RESTRICTED'",
+      "type": "line",
+      "mapFilter": "Route",
+      "source-layer": "routeRSA",
+      "minzoom": 2.5,
+      "paint": {
+        "line-color": "route_rsa",
+        "line-opacity": ["interpolate",["exponential", 0.5], ["zoom"], 2.5, 0.0, 4.5, 0.2],
+        "line-width": ["interpolate",["linear"], ["zoom"], 2.5, 2, 5, 3],
+        "line-offset": ["interpolate", ["linear"], ["zoom"], 2.5, 1, 5, 1.5]
+      }
+    }, {
+      "id": "routeRSA",
+      "iosFilter": "tp == 'RESTRICTED'",
+      "type": "line",
+      "mapFilter": "Route",
+      "minzoom": 2.5,
+      "source-layer": "routeRSA",
+      "paint": {
+        "line-color": "route_rsa",
+        "line-width": [
+          "interpolate",
+          ["linear"], ["zoom"], 2.5, 1, 5, 2
+        ],
+        "line-opacity": ["interpolate",["linear"],["zoom"], 2.5, 0.0, 5, 1.0]
+      }
+    }
+  ]
+}

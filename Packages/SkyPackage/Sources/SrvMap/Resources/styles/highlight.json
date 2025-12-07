@@ -1,0 +1,355 @@
+{
+  "layers": [
+    {
+      "id": "H_LINES",
+      "type": "line",
+      "minzoom": 1,
+      "source-layer": "highlight",
+      "paint": {
+        "line-color": "highlight",
+        "line-width": 2
+      }
+    },
+    {
+      "id": "H_LINES_BORDERS",
+      "type": "line",
+      "minzoom": 1,
+      "source-layer": "highlight",
+      "paint": {
+        "line-color": "highlight",
+        "line-width": 8,
+        "line-offset": -1,
+        "line-opacity": 0.75
+      }
+    },
+    
+    {
+      "id": "H_CENTER_LABEL_TWOWAY_NOOVERLAP",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "isOneWay == 0 AND isOneLabel == 1",
+      "source-layer": "highlight",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": false,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 8],
+        "icon-image": "tra_label_two_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL"
+      }
+    }, {
+      "id": "H_CENTER_LABEL_ONEWAY_NOOVERLAP",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "isOneWay == 1 AND isOneLabel == 1",
+      "source-layer": "highlight",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": false,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 20],
+        "icon-image": "tra_label_one_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL",
+      }
+    }, {
+      "id": "H_CENTER_LABEL_TWOWAY_OVERLAP",
+      "type": "symbol",
+      "iosFilter": "isOneWay == 0 AND isOneLabel == 0",
+      "minzoom": 1,
+      "source-layer": "highlight",
+      "layout": {
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": true,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 8],
+        "icon-image": "tra_label_two_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL"
+      }
+    }, {
+      "id": "H_CENTER_LABEL_ONEWAY_OVERLAP",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "isOneWay == 1 AND isOneLabel == 0",
+      "source-layer": "highlight",
+      "layout": {
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-rotate": ["to-number", ["get", "lbl_a"]],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": ["to-string", ["get", "name"]],
+        "icon-text-fit": "both",
+        "icon-allow-overlap": true,
+        "icon-rotation-alignment": "map",
+        "icon-rotate":["to-number", ["get", "ic_a"]],
+        "icon-text-fit-padding": [2, 8, 2, 20],
+        "icon-image": "tra_label_one_way"
+      },
+      "paint": {
+        "text-color": "route_TRA_LABEL"
+      }
+    },
+    {
+      "id": "H_POINT_BACKGROUND",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp != nil",
+      "source-layer": "highlight",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 0.70,
+        "icon-image": "highlighted"
+      }
+    },
+     {
+      "id": "H_NAV_DME",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'DME'",
+      "source-layer": "highlight",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "dme",
+        "text-size": 16,
+        "text-offset": [0, 1.5],
+        "text-anchor": "top",
+        "text-optional":true,
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-field": ["concat", ["to-string", ["get", "nm"], " ", ["get", "tf"]]]
+      },
+      "paint": {
+        "text-color": "nav_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.5
+      }
+    }, {
+      "id": "H_NAV_VORDME",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'VORDME'",
+      "source-layer": "highlight",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "vordme",
+        "text-size": 16,
+        "text-offset": [0, 1.5],
+        "text-anchor": "top",
+        "text-optional":true,
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-field": ["concat", ["to-string", ["get", "nm"], " ", ["get", "tf"]]]
+      },
+      "paint": {
+        "text-color": "nav_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.5
+      }
+    }, {
+      "id": "H_NAV_VOR",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'VOR'",
+      "source-layer": "highlight",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "vor",
+        "text-size": 16,
+        "text-offset": [0, 1.5],
+        "text-anchor": "top",
+        "text-optional":true,
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-field": ["concat", ["to-string", ["get", "nm"], " ", ["get", "tf"]]]
+      },
+      "paint": {
+        "text-color": "nav_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.5
+      }
+    }, {
+      "id": "H_NAV_VORTAC",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'VORTAC'",
+      "source-layer": "highlight",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "vortac",
+        "text-size": 16,
+        "text-offset": [0, 1.5],
+        "text-anchor": "top",
+        "text-optional":true,
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-field": ["concat", ["to-string", ["get", "nm"], " ", ["get", "tf"]]]
+      },
+      "paint": {
+        "text-color": "nav_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.5
+      }
+    }, {
+      "id": "H_NAV_NDB",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'NDB'",
+      "source-layer": "highlight",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "ndb",
+        "text-size": 16,
+        "text-offset": [0, 1.5],
+        "text-anchor": "top",
+        "text-optional":true,
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-field": ["concat", ["to-string", ["get", "nm"], " ", ["get", "tf"]]]
+      },
+      "paint": {
+        "text-color": "nav_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.5
+      }
+    }, {
+      "id": "H_WPT_COMPULSORY",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'WPT_COMPULSORY'",
+      "source-layer": "highlight",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-offset": [0, 1.5],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-field": ["to-string", ["get", "nm"]],
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "wpt_compulsory"
+      },
+      "paint": {
+        "text-color": "tpt_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    }, {
+      "id": "H_WPT_ON_REQUEST",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'WPT_ON_REQUEST'",
+      "source-layer": "highlight",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-offset": [0, 1.5],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-field": ["to-string", ["get", "nm"]],
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "wpt_request"
+      },
+      "paint": {
+        "text-color": "tpt_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    
+    {
+      "id": "H_POI",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'POI'",
+      "source-layer": "highlight",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-offset": [0, 1.5],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-field": ["to-string", ["get", "nm"]],
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "poi"
+      },
+      "paint": {
+        "text-color": "tpt_wo_dim",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+    
+    {
+      "id": "H_ARP",
+      "type": "symbol",
+      "minzoom": 1,
+      "iosFilter": "tp == 'AH'",
+      "source-layer": "highlight",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": 1.1,
+        "icon-image": "airport"
+      }
+    }, {
+      "id": "H_LABEL",
+      "type": "symbol",
+      "source-layer": "highlight",
+      "iosFilter": "tp == 'AH'",
+      "minzoom": 1,
+      "layout": {
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-offset": [0, 1.3],
+        "text-font": ["Open Sans Bold"],
+        "text-size": 17,
+        "text-field": ["to-string", ["concat", ["get", "nm"], "\n", ["get", "nl_en"]]]
+      },
+      "paint": { "text-color": "arp_label_wo_dim", "text-halo-color": "TEXT_HALO", "text-halo-width": 1.2 }
+    }
+  ]
+}

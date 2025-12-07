@@ -1,0 +1,754 @@
+[
+  {
+    "name": "highlight",
+    "values": { "light": "e87272", "dark": "de4e4e" },
+    "isDim": false
+  },
+  {
+    "name": "highlighttaxiroute",
+    "values": { "light": "FDA74E", "dark": "FDA74E" },
+    "isDim": false
+  },
+  {
+    "name": "pastelblue",
+    "values": { "light": "aee4ea", "dark": "aee4ea" },
+    "isDim": false
+  },
+  {
+    "name": "background",
+    "values": { "light": "a4bfc8", "dark": "2b4d6c" },
+    "isDim": false
+  },
+  {
+    "name": "diagrambackground",
+    "values": { "light": "F0F0F0", "dark": "292E2F" },
+    "isDim": false
+  },
+  {
+    "name": "land",
+    "values": { "light": "F0F0F0", "dark": "292E2F" },
+    "isDim": false
+  },
+  {
+    "name": "water_outline",
+    "values": { "light": "C8D2DC", "dark": "314368" },
+    "isDim": false
+  },
+  {
+    "name": "landuse",
+    "values": { "light": "b1a9a9", "dark": "545454" },
+    "isDim": false
+  },
+  {
+    "name": "island",
+    "values": { "light": "000000", "dark": "d9d9d9" },
+    "isDim": false
+  },
+  {
+    "name": "city",
+    "values": { "light": "919191", "dark": "919191" },
+    "isDim": false
+  },
+  {
+    "name": "topo_halo",
+    "values": { "light": "dedede", "dark": "1a1a1a", "dim_light": "clear", "dim_dark": "clear" },
+    "isDim": false
+  },
+  {
+    "name": "country_label",
+    "values": { "light": "2e2e2e", "dark": "e6e6e6" },
+    "isDim": false
+  },
+  {
+    "name": "boundary_land",
+    "values": { "light": "AAAABE", "dark": "AAAABE" },
+    "isDim": false
+  },
+  {
+    "name": "boundary_sea",
+    "values": { "light": "AAAABE", "dark": "AAAABE" },
+    "isDim": false
+  },
+  {
+    "name": "shadow_line",
+    "values": { "light": "A4A4A4", "dark": "675e52" },
+    "isDim": false
+  },
+  {
+    "name": "width_line",
+    "values": { "light": "bdbdbd", "dark": "bdbdbd" },
+    "isDim": false
+  },
+  {
+    "name": "rif_line",
+    "values": { "light": "35c759", "dark": "35c759" },
+    "isDim": false
+  },
+  {
+    "name": "route_line",
+    "values": { "light": "FDA74E", "dark": "FDA74E" },
+    "isDim": false
+  },
+  {
+    "name": "hidden_line",
+    "values": { "light": "clear", "dark": "clear" },
+    "isDim": false
+  },
+  {
+    "name": "hold_line",
+    "values": { "light": "FDA74E", "dark": "FDA74E" },
+    "isDim": false
+  },
+  {
+    "name": "grid_line",
+    "values": { "light": "77848d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  {
+    "name": "grid_text",
+    "values": { "light": "424a4f", "dark": "b0bec5" },
+    "isDim": false
+  },
+  {
+    "name": "mora",
+    "values": { "light": "0092ca", "dark": "0092ca" },
+    "isDim": false
+  },
+  {
+    "name": "mora_critical",
+    "values": { "light": "f65974", "dark": "f65974" },
+    "isDim": false
+  },
+  {
+    "name": "nav",
+    "values": { "light": "006496", "dark": "006496" },
+    "isDim": true
+  },
+  {
+    "name": "nav_wo_dim",
+    "values": { "light": "006496", "dark": "006496" },
+    "isDim": false
+  },
+  {
+    "name": "nav_ndb",
+    "values": { "light": "006496", "dark": "006496" },
+    "isDim": true
+  },
+  {
+    "name": "tpt",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": true
+  },
+  {
+    "name": "tpt_wo_dim",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  {
+    "name": "tpm",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": true
+  },
+  {
+    "name": "arp_label",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": true
+  },
+  {
+    "name": "arp_label_wo_dim",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  {
+    "name": "text_halo",
+    "values": { "light": "ffffff", "dark": "000000", "dim_light": "clear", "dim_dark": "clear" },
+    "isDim": true
+  },
+  {
+    "name": "text_invert_halo",
+    "values": { "light": "000000", "dark": "ffffff", "dim_light": "clear", "dim_dark": "clear" },
+    "isDim": true
+  },
+  {
+    "name": "sector",
+    "values": { "light": "5CA595", "dark": "5CA595" },
+    "isDim": true
+  },
+  {
+    "name": "rma",
+    "values": { "light": "00a64a", "dark": "00a64a" },
+    "isDim": true
+  },
+  {
+    "name": "fir",
+    "values": { "light": "5CA595", "dark": "5CA595" },
+    "isDim": true
+  },
+  {
+    "name": "cta",
+    "values": { "light": "0E85B4", "dark": "0E85B4" },
+    "isDim": true
+  },
+  {
+    "name": "tma",
+    "values": { "light": "8281B5", "dark": "8281B5" },
+    "isDim": true
+  },{
+    "name": "ctr",
+    "values": { "light": "3c8cc8", "dark": "3c8cc8" },
+    "isDim": true
+  },
+  {
+    "name": "rsa",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": true
+  },
+  {
+    "name": "rsa_label",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": true
+  },
+  {
+    "name": "restricted",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": true
+  },
+  {
+    "name": "restricted_label",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": true
+  },
+  {
+    "name": "prohibited",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": true
+  },
+  {
+    "name": "rwy",
+    "values": { "light": "000000", "dark": "000000" },
+    "isDim": true
+  },
+  {
+    "name": "rwy_outline",
+    "values": { "light": "000000", "dark": "000000" },
+    "isDim": true
+  },
+  {
+    "name": "rose",
+    "values": { "light": "787878", "dark": "787878" },
+    "isDim": true
+  },
+  {
+    "name": "tra",
+    "values": { "light": "605c5c", "dark": "90A4AE" },
+    "isDim": true
+  },
+  {
+    "name": "tra_label",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": true
+  },
+  {
+    "name": "directto_label",
+    "values": { "light": "b0bec5", "dark": "2d2d2d" },
+    "isDim": false
+  },
+  {
+    "name": "hold",
+    "values": { "light": "605c5c", "dark": "90A4AE" },
+    "isDim": true
+  },
+  {
+    "name": "hold_label",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": true
+  },
+  {
+    "name": "directto_line",
+    "values": { "light": "FDA74E", "dark": "FDA74E" },
+    "isDim": false
+  },
+  {
+    "name": "directnearby_line",
+    "values": { "light": "cf8c82", "dark": "cf8c82" },
+    "isDim": false
+  },
+  {
+    "name": "directnearby_circle",
+    "values": { "light": "787575", "dark": "787575" },
+    "isDim": false
+  },
+  {
+    "name": "mora_text_halo",
+    "values": { "light": "ffffff", "dark": "000000" },
+    "isDim": false
+  },
+  
+  {
+    "name": "additional_text_halo",
+    "values": { "light": "ffffff", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "additional_tpt",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  
+  
+  
+  
+  {
+    "name": "route_sector",
+    "values": { "light": "5CA595", "dark": "5CA595" },
+    "isDim": false
+  },
+  {
+    "name": "route_fir",
+    "values": { "light": "5CA595", "dark": "5CA595" },
+    "isDim": false
+  },
+  {
+    "name": "route_cta",
+    "values": { "light": "0E85B4", "dark": "0E85B4" },
+    "isDim": false
+  },
+  {
+    "name": "route_tma",
+    "values": { "light": "8281B5", "dark": "8281B5" },
+    "isDim": false
+  },{
+    "name": "route_ctr",
+    "values": { "light": "3c8cc8", "dark": "3c8cc8" },
+    "isDim": false
+  },
+  {
+    "name": "route_rsa",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": false
+  },
+  {
+    "name": "route_rsa_label",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": false
+  },
+  {
+    "name": "route_restricted",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": false
+  },
+  {
+    "name": "route_restricted_label",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": false
+  },
+  {
+    "name": "route_prohibited",
+    "values": { "light": "B88080", "dark": "B88080" },
+    "isDim": false
+  },
+  
+  
+  
+  
+  {
+    "name": "route_tra_label",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  {
+    "name": "route_nav",
+    "values": { "light": "006496", "dark": "006496" },
+    "isDim": false
+  },
+  
+  {
+    "name": "proc_alt",
+    "values": { "light": "3232a5", "dark": "3232a5" },
+    "isDim": false
+  },
+  
+  {
+    "name": "route_text_halo",
+    "values": { "light": "ffffff", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "route_tpt",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  {
+    "name": "route_arp_label",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  {
+    "name": "-2000",
+    "values": { "light": "F8E6BA", "dark": "453307" },
+    "isDim": false
+  },
+  {
+    "name": "-1000",
+    "values": { "light": "F8E6BA", "dark": "453307" },
+    "isDim": false
+  },
+  {
+    "name": "0",
+    "values": { "light": "F8E6BA", "dark": "453307" },
+    "isDim": false
+  },
+  {
+    "name": "1000",
+    "values": { "light": "F8E6BA", "dark": "453307" },
+    "isDim": false
+  },
+  {
+    "name": "2000",
+    "values": { "light": "F8E6BA", "dark": "453307" },
+    "isDim": false
+  },
+  {
+    "name": "3000",
+    "values": { "light": "F8E6BA", "dark": "453307" },
+    "isDim": false
+  },
+  {
+    "name": "4000",
+    "values": { "light": "EBC393", "dark": "6C4414" },
+    "isDim": false
+  },
+  {
+    "name": "5000",
+    "values": { "light": "DB9A74", "dark": "8B4A24" },
+    "isDim": false
+  },
+  {
+    "name": "6000",
+    "values": { "light": "D08B68", "dark": "97522F" },
+    "isDim": false
+  },
+  {
+    "name": "7000",
+    "values": { "light": "CC8462", "dark": "9D5533" },
+    "isDim": false
+  },
+  {
+    "name": "8000",
+    "values": { "light": "C77E5D", "dark": "A25938" },
+    "isDim": false
+  },
+  {
+    "name": "9000",
+    "values": { "light": "C27758", "dark": "A75C3D" },
+    "isDim": false
+  },
+  {
+    "name": "10000",
+    "values": { "light": "BC7154", "dark": "AB6043" },
+    "isDim": false
+  },
+  {
+    "name": "11000",
+    "values": { "light": "B66B50", "dark": "AF6449" },
+    "isDim": false
+  },
+  {
+    "name": "12000",
+    "values": { "light": "AF654B", "dark": "B46A50" },
+    "isDim": false
+  },
+  {
+    "name": "13000",
+    "values": { "light": "A6614B", "dark": "B46F59" },
+    "isDim": false
+  },
+  {
+    "name": "14000",
+    "values": { "light": "9C5D4A", "dark": "B57663" },
+    "isDim": false
+  },
+  {
+    "name": "15000",
+    "values": { "light": "93594A", "dark": "B57B6C" },
+    "isDim": false
+  },
+  {
+    "name": "16000",
+    "values": { "light": "8A5548", "dark": "B78275" },
+    "isDim": false
+  },
+  {
+    "name": "17000",
+    "values": { "light": "815147", "dark": "B8887E" },
+    "isDim": false
+  },
+  {
+    "name": "18000",
+    "values": { "light": "794D45", "dark": "BA8E86" },
+    "isDim": false
+  },
+  {
+    "name": "19000",
+    "values": { "light": "7C5651", "dark": "AE8883" },
+    "isDim": false
+  },
+  {
+    "name": "20000",
+    "values": { "light": "8D6C67", "dark": "987772" },
+    "isDim": false
+  },
+  {
+    "name": "21000",
+    "values": { "light": "9E827D", "dark": "826661" },
+    "isDim": false
+  },
+  {
+    "name": "22000",
+    "values": { "light": "AF9794", "dark": "6B5350" },
+    "isDim": false
+  },
+  {
+    "name": "23000",
+    "values": { "light": "C1AFAC", "dark": "53413E" },
+    "isDim": false
+  },
+  {
+    "name": "24000",
+    "values": { "light": "D2C5C3", "dark": "3C2F2D" },
+    "isDim": false
+  },
+  {
+    "name": "25000",
+    "values": { "light": "E3DAD9", "dark": "261D1C" },
+    "isDim": false
+  },
+  {
+    "name": "26000",
+    "values": { "light": "F3F0F0", "dark": "0F0C0C" },
+    "isDim": false
+  },
+  {
+    "name": "27000",
+    "values": { "light": "FFFFFF", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "28000",
+    "values": { "light": "FFFFFF", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "29000",
+    "values": { "light": "FFFFFF", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "30000",
+    "values": { "light": "FFFFFF", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "zovgreen",
+    "values": { "light": "167378", "dark": "167378" },
+    "isDim": false
+  },
+  {
+    "name": "zovred",
+    "values": { "light": "d6675c", "dark": "d6675c" },
+    "isDim": false
+  },
+  {
+    "name": "zovyellow",
+    "values": { "light": "fdcc0d", "dark": "fdcc0d" },
+    "isDim": false
+  },
+  {
+    "name": "pink",
+    "values": { "light": "d141e6", "dark": "d141e6" },
+    "isDim": false
+  },
+  
+  
+  {
+    "name": "diagram_runwayelement",
+    "values": { "light": "000000", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_grey_dark",
+    "values": { "light": "cccccc", "dark": "525253" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_grey_light",
+    "values": { "light": "adadad", "dark": "444547" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_verticalpolygonalstructure",
+    "values": { "light": "666652", "dark": "666652" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_hotspot",
+    "values": { "light": "ff2800", "dark": "ff2800" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_taxiwayintersectionmarking",
+    "values": { "light": "bd5943", "dark": "bd5943" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_taxiwayholdingposition",
+    "values": { "light": "bd5943", "dark": "bd5943" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_abfrequencyarea",
+    "values": { "light": "d2b8e3", "dark": "d2b8e3" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_airfieldline",
+    "comment": "Рулежные дорожки",
+    "values": { "light": "ddb211", "dark": "f5e42e" },
+    "isDim": false
+  },
+  {
+    "name": "diagram_apron",
+    "comment": "Границы перронов",
+    "values": { "light": "d4b8e3", "dark": "d4b8e3" },
+    "isDim": false
+  },
+  {
+    "name": "nearbybox",
+    "values": { "light": "f10120", "dark": "f10120" },
+    "isDim": false
+  },
+  {
+    "name": "proc_orange",
+    "values": { "light": "be5f13", "dark": "be5f13" },
+    "isDim": false
+  },
+  {
+    "name": "proc_line",
+    "values": { "light": "000000", "dark": "ffffff" },
+    "isDim": false
+  },
+    
+  {
+    "name": "proc_sid_line",
+    "values": { "light": "87cefa", "dark": "064c79" },
+    "isDim": false
+  },
+  {
+    "name": "proc_star_line",
+    "values": { "light": "8fbc8b", "dark": "477443" },
+    "isDim": false
+  },
+  {
+    "name": "msa_line",
+    "values": { "light": "cfbfc5", "dark": "3d2f34" },
+    "isDim": false
+  },
+  {
+    "name": "proc_line_z",
+    "values": { "light": "788664", "dark": "8c9b79" },
+    "isDim": false
+  },
+  {
+    "name": "proc_alt",
+    "values": { "light": "3232a5", "dark": "5a5acd" },
+    "isDim": false
+  },
+  
+  {
+    "name": "proc_text",
+    "values": { "light": "000000", "dark": "ffffff" },
+    "isDim": false
+  },
+  
+  {
+    "name": "proc_freq",
+    "values": { "light": "145a95", "dark": "69afeb" },
+    "isDim": false
+  },
+  
+  {
+    "name": "sigmets-fill-orange",
+    "values": { "light": "dd7f7f", "dark": "dd7f7f" },
+    "isDim": false
+  },
+  {
+    "name": "sigmets-border-orange",
+    "values": { "light": "990f10", "dark": "990f10" },
+    "isDim": false
+  },
+  {
+    "name": "sigmets-text",
+    "values": { "light": "000000", "dark": "b0bec5" },
+    "isDim": false
+  },
+  
+  {
+    "name": "sigmets-fill-gray",
+    "values": { "light": "c4bfbe", "dark": "c4bfbe" },
+    "isDim": false
+  },
+  {
+    "name": "sigmets-border-gray",
+    "values": { "light": "990f10", "dark": "990f10" },
+    "isDim": false
+  },
+  {
+    "name": "sigmets-text-gray",
+    "values": { "light": "990f10", "dark": "990f10" },
+    "isDim": false
+  },
+  
+  {
+    "name": "sigmets-fill-blue",
+    "values": { "light": "7c80c8", "dark": "7c80c8" },
+    "isDim": false
+  },
+  {
+    "name": "sigmets-border-blue",
+    "values": { "light": "990f10", "dark": "990f10" },
+    "isDim": false
+  },
+  {
+    "name": "sigmets-text-blue",
+    "values": { "light": "990f10", "dark": "990f10" },
+    "isDim": false
+  },
+  {
+    "name": "airfield_text",
+    "values": { "light": "2d2d2d", "dark": "b0bec5" },
+    "isDim": false
+  },
+  
+  {
+    "name": "airfield_abtaxiwayholdingpositionlabels",
+    "values": { "light": "ffffff", "dark": "ffffff" },
+    "isDim": false
+  },
+  {
+    "name": "taxiway_text",
+    "values": { "light": "f2f233", "dark": "f2f233" },
+    "isDim": false
+  },
+  {
+    "name": "taxiway_back",
+    "values": { "light": "000000", "dark": "000000" },
+    "isDim": false
+  },
+  {
+    "name": "airfield_halo",
+    "values": { "light": "ffffff", "dark": "000000", "dim_light": "clear", "dim_dark": "clear" },
+    "isDim": false
+  },
+]
+
+ 

@@ -1,0 +1,17 @@
+{
+  "layers": [
+    {
+      "id": "DH-taxi",
+      "type": "polygon_fill",
+      "insertAfterId": "airfield-abHotspot",
+      "minzoom": 1,
+      "iosFilter": "tp == 'taxi'",
+      "source-layer": "diagramHighlightTaxi",
+      "layout": {},
+      "paint": {
+        "fill-color": "pastelblue",
+        "fill-opacity": [ "interpolate", ["linear"],["zoom"], 1, 0.0, 3, 0.8 ]
+      }
+    }
+  ]
+}

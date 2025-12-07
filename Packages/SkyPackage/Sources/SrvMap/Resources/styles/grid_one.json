@@ -1,0 +1,55 @@
+{
+  "layers": [
+    {
+        "id": "grid_1degree",
+        "type": "line",
+        "mapFilter": "gridmora",
+        "minzoom": 7.0,
+        "source-layer": "grid_1degree",
+        "paint": {
+          "line-color": "grid_line",
+          "line-width": 1.4,
+          "line-opacity": 0.9
+        }
+    },
+    {
+        "id": "grid-labels_1degree_lat",
+        "type": "symbol",
+        "mapFilter": "gridmora",
+        "minzoom": 7.0,
+        "source-layer": "labels_1degree",
+        "layout": {
+          "text-offset": [-2, -0.65],
+          "text-allow-overlap": true,
+          "text-font": ["Open Sans Bold"],
+          "text-field": ["get", "lat"],
+          "text-color": "grid_text",
+          "text-justify": "left",
+          "text-rotation-alignment": "map",
+          "text-halo-width": 1.2,
+          "text-size": 14,
+          "text-opacity": 0.7
+        }
+    },
+    {
+        "id": "grid-labels_1degree_lon",
+        "type": "symbol",
+        "mapFilter": "gridmora",
+        "minzoom": 7.0,
+        "source-layer": "labels_1degree",
+        "layout": {
+          "text-offset": [-2.0, -0.65],
+          "text-allow-overlap": true,
+          "text-font": ["Open Sans Bold"],
+          "text-field": ["get", "lon"],
+          "text-color": "grid_text",
+          "text-rotate": 90,
+          "text-rotation-alignment": "map",
+          "text-justify": "left",
+          "text-halo-width": 1.2,
+          "text-size": 14,
+          "text-opacity": 0.7
+        }
+    }
+  ]
+}

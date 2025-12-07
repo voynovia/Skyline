@@ -1,0 +1,17 @@
+{
+  "layers": [
+    {
+      "id": "turbulence",
+      "minzoom": 0.0,
+      "maxZoom": 6.9,
+      "type": "fill",
+      "insertAfterId": "WxBaseLayer",
+      "source-layer": "turb",
+      "paint": {
+        "fill-color": ["get", "fill"],
+        "fill-opacity": ["get", "fill-opacity"],
+        "fill-antialias": false
+      }
+    }
+  ]
+}

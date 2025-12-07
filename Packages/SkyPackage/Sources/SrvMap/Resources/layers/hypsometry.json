@@ -1,0 +1,282 @@
+[
+  {
+    "id": "G--2000",
+    "type": "fill",
+    "insertAfterId": "island",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "-2000",
+    "layout": {},
+    "paint": {"fill-color": "#002266", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G--1000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "-1000",
+    "layout": {},
+    "paint": {"fill-color": "#0088CC", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-0",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "0",
+    "layout": {},
+    "paint": {"fill-color": "#005500", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-1000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "1000",
+    "layout": {},
+    "paint": {"fill-color": "#008800", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-2000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "2000",
+    "layout": {},
+    "paint": {"fill-color": "#55AA00", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-3000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "3000",
+    "layout": {},
+    "paint": {"fill-color": "#AACC00", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-4000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "4000",
+    "layout": {},
+    "paint": {"fill-color": "#FFDD00", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-5000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "5000",
+    "layout": {},
+    "paint": {"fill-color": "#FFAA00", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-6000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "6000",
+    "layout": {},
+    "paint": {"fill-color": "#D07000", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-7000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "7000",
+    "layout": {},
+    "paint": {"fill-color": "#964B00", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-8000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "8000",
+    "layout": {},
+    "paint": {"fill-color": "#5A2E00", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-9000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "9000",
+    "layout": {},
+    "paint": {"fill-color": "#888888", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-10000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "10000",
+    "layout": {},
+    "paint": {"fill-color": "#BBBBBB", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-11000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "11000",
+    "layout": {},
+    "paint": {"fill-color": "#BBBBBB", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-12000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "12000",
+    "layout": {},
+    "paint": {"fill-color": "#BBBBBB", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-13000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "14000",
+    "layout": {},
+    "paint": {"fill-color": "#BBBBBB", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-15000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "15000",
+    "layout": {},
+    "paint": {"fill-color": "#FFFFFF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-17000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "17000",
+    "layout": {},
+    "paint": {"fill-color": "#FFFFFF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-18000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "18000",
+    "layout": {},
+    "paint": {"fill-color": "#FFFFFF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-19000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "19000",
+    "layout": {},
+    "paint": {"fill-color": "#FFFFFF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-20000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "20000",
+    "layout": {},
+    "paint": {"fill-color": "#E0F0FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-21000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "21000",
+    "layout": {},
+    "paint": {"fill-color": "#E0F0FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-22000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "22000",
+    "layout": {},
+    "paint": {"fill-color": "#E0F0FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-23000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "23000",
+    "layout": {},
+    "paint": {"fill-color": "#E0F0FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-24000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "24000",
+    "layout": {},
+    "paint": {"fill-color": "#E0F0FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-25000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "25000",
+    "layout": {},
+    "paint": {"fill-color": "#D0E8FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-26000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "26000",
+    "layout": {},
+    "paint": {"fill-color": "#D0E8FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-27000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "27000",
+    "layout": {},
+    "paint": {"fill-color": "#D0E8FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-28000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "28000",
+    "layout": {},
+    "paint": {"fill-color": "#D0E8FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-29000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "29000",
+    "layout": {},
+    "paint": {"fill-color": "#D0E8FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  },
+  {
+    "id": "G-30000",
+    "type": "fill",
+    "mapFilter": "Terrain",
+    "source": "hypsometry",
+    "source-layer": "30000",
+    "layout": {},
+    "paint": {"fill-color": "#D0E8FF", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 2, 0.35, 4, 0.5 ]}
+  }
+]

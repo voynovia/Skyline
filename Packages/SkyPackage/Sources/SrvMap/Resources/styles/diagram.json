@@ -1,0 +1,277 @@
+{
+  "layers": [
+    {
+      "id": "airfield-abApronElement",
+      "type": "fill",
+      "source-layer": "abApronElement",
+      "layout": {},
+      "paint": {"fill-color": "diagram_grey_dark"}
+    },
+    {
+      "id": "airfield-abTaxiwayElement",
+      "type": "fill",
+      "source-layer": "abTaxiwayElement",
+      "layout": {},
+      "paint": {"fill-color": "diagram_grey_light"}
+    },
+    {
+      "id": "airfield-abRunwayDisplacedArea",
+      "type": "fill",
+      "source-layer": "abRunwayDisplacedArea",
+      "layout": {},
+      "paint": {"fill-color": "diagram_grey_light"}
+    },
+    {
+      "id": "airfield-Blastpad",
+      "type": "fill",
+      "source-layer": "Blastpad",
+      "layout": {},
+      "paint": {"fill-color": "diagram_grey_light"}
+    },
+    {
+      "id": "airfield-abRunwayElement",
+      "type": "fill",
+      "source-layer": "abRunwayElement",
+      "layout": {},
+      "paint": {"fill-color": "diagram_runwayelement"}
+    },
+    {
+      "id": "airfield-abVerticalPolygonalStructure",
+      "type": "fill",
+      "source-layer": "abVerticalPolygonalStructure",
+      "layout": {},
+      "paint": {"fill-color": "diagram_verticalPolygonalStructure"}
+    },
+    
+    {
+      "id": "airfield-abRunwayIntersection",
+      "type": "fill",
+      "source-layer": "abRunwayIntersection",
+      "layout": {},
+      "paint": {"fill-color": "diagram_runwayelement"}
+    },
+    
+    {
+      "id": "airfield-abRunwayExitLine",
+      "type": "line",
+      "minzoom": 13.0,
+      "source-layer": "abRunwayExitLine",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_airfieldline",
+        "line-width": 2.2
+      }
+    },
+    {
+      "id": "airfield-abStandGuidanceLine",
+      "type": "line",
+      "minzoom": 13.0,
+      "source-layer": "abStandGuidanceLine",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_airfieldline",
+        "line-width": 2.2
+      }
+    },
+    {
+      "id": "airfield-abTaxiwayGuidanceLine",
+      "type": "line",
+      "minzoom": 13.0,
+      "source-layer": "abTaxiwayGuidanceLine",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_airfieldline",
+        "line-width": 2.2
+      }
+    },
+    {
+      "id": "airfield-abTaxiwayIntersectionMarking",
+      "type": "line",
+      "source-layer": "abTaxiwayIntersectionMarking",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_taxiwayIntersectionMarking",
+        "line-width": 5
+      }
+    },
+    {
+      "id": "airfield-abTaxiwayHoldingPosition",
+      "type": "line",
+      "source-layer": "abTaxiwayHoldingPosition",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_taxiwayHoldingPosition",
+        "line-width": 5
+      }
+    },
+    {
+      "id": "airfield-abTaxiwayHoldingPosition-shadow",
+      "type": "line",
+      "source-layer": "abTaxiwayHoldingPosition",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_taxiwayHoldingPosition",
+        "line-width": 4,
+        "line-dasharray": [0.55,0.55],
+        "line-offset": -4
+      }
+    },
+    {
+      "id": "airfield-abHotspot",
+      "type": "line",
+      "minzoom": 12.0,
+      "source-layer": "abHotspot",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_hotspot",
+        "line-width": 4.0
+      }
+    },
+    {
+      "id": "airfield-abFrequencyArea",
+      "type": "line",
+      "source-layer": "abFrequencyArea",
+      "layout": {},
+      "paint": {
+        "line-color": "diagram_abfrequencyarea",
+        "line-width": 2.0,
+        "line-dasharray": [0.55,0.55],
+        "line-offset": -4
+      }
+    },
+    {
+      "id": "highlight_base",
+      "type": "line",
+      "source-layer": "highlight_base"
+    },
+    {
+      "id": "airfield_abVerticalPolygonalStructure_name",
+      "type": "symbol",
+      "iosFilter": "ident != '$UNK' AND ident != '$NA'",
+      "mapFilter": "Route",
+      "minzoom": 12.0,
+      "source-layer": "abVerticalPolygonalStructure",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-optional":true,
+        "text-anchor": "center",
+        "text-font": ["Open Sans SemiBold"],
+        "text-size": 13,
+        "text-max-width": 25,
+        "text-field": "{ident}",
+      },
+      "paint": {
+        "text-color": "airfield_text",
+        "text-halo-color": "airfield_halo",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "airfield_abApronElement_name",
+      "type": "symbol",
+      "iosFilter": "idapron != '$UNK'",
+      "mapFilter": "Route",
+      "minzoom": 12.0,
+      "source-layer": "abApronElement",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-optional":true,
+        "text-anchor": "center",
+        "text-font": ["Open Sans SemiBold Italic"],
+        "text-size": 18,
+        "text-max-width": 25,
+        "text-field": "{idapron}",
+      },
+      "paint": {
+        "text-color": "airfield_text",
+        "text-halo-color": "airfield_halo",
+        "text-halo-width": 0.7
+      }
+    },
+    {
+      "id": "airfield_abTaxiwayHoldingPositionLabels",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 13.0,
+      "source-layer": "abTaxiwayHoldingPositionLabels",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-size": 14,
+        "text-max-width": 25,
+        "text-field": "{name}",
+      },
+      "paint": {
+        "text-color": "airfield_abtaxiwayholdingpositionlabels",
+        "text-halo-color": "diagram_taxiwayHoldingPosition",
+        "text-halo-width": 5.0
+      }
+    },
+    {
+      "id": "airfield_abParkingStandLocation",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "minzoom": 14.0,
+      "source-layer": "abParkingStandLocation",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": "{idstd}",
+      },
+      "paint": {
+        "text-color": "airfield_text",
+        "text-halo-color": "airfield_halo",
+        "text-halo-width": 1.2
+      }
+    },
+    
+    {
+      "id": "airfield_abTaxiwayElement",
+      "type": "symbol",
+      "mapFilter": "Route",
+      "iosFilter": "idlin != '$UNK'",
+      "minzoom": 13.0,
+      "source-layer": "abTaxiwayElement",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-font": ["Open Sans Bold"],
+        "text-size": 16,
+        "text-max-width": 25,
+        "text-field": "{idlin}",
+      },
+      "paint": {
+        "text-color": "taxiway_text",
+        "text-halo-color": "taxiway_back",
+        "text-halo-width": 4.0
+      }
+    },
+    {
+      "id": "airfield_abRunwayThreshold",
+      "type": "symbol",
+      "minzoom": 11.5,
+      "mapFilter": "Route",
+      "source-layer": "abRunwayThreshold",
+      "layout": {
+        "icon-ignore-placement":false,
+        "icon-allow-overlap": false,
+        "icon-size": 1.1,
+        "icon-image": "runway",
+        "text-allow-overlap": false,
+        "text-optional": true,
+        "text-field": [
+          "format",
+          ["get", "brngmag"], { "font-scale": 0.9, "text-color": "&proc_text" },
+          ["concat", "\n", ["get", "idthr"]], { "font-scale": 1.6, "text-color": "&proc_text" },
+        ],
+        "text-font": ["Open Sans Bold"],
+      },
+      "paint": {
+        "text-color": "airfield_text",
+        "text-halo-color": "airfield_halo",
+        "text-halo-width": 1.2
+      }
+    },
+  ]
+}

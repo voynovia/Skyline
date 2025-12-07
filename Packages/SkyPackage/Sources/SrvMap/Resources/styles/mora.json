@@ -1,0 +1,97 @@
+{
+  "layers": [
+    {
+      "id": "MORA1",
+      "type": "symbol",
+      "mapFilter": "gridmora",
+      "minzoom": 7.0,
+      "source-layer": "AMA1",
+      "layout": {
+        "text-offset": [0, 0.27],
+        "text-allow-overlap": true,
+        "text-font": ["Open Sans SemiBold"],
+        "text-field": [
+          "format",
+          ["get", "h1Value"], { "font-scale": 1.2 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "h1Value"]], 9], "#f65974", "#0092ca" ],
+        "text-halo-color": "mora_text_halo",
+        "text-anchor": "right",
+        "text-halo-width": 1.2,
+        "text-size": 28,
+        "text-opacity": 0.8,
+      }
+    },
+    {
+      "id": "MORA1-1",
+      "type": "symbol",
+      "mapFilter": "gridmora",
+      "minzoom": 7.0,
+      "source-layer": "AMA1",
+      "layout": {
+        "text-offset": [0.1, 0],
+        "text-allow-overlap": true,
+        "text-font": ["Open Sans SemiBold"],
+        "text-field": [
+          "format",
+          ["get", "h2Value"], { "font-scale": 1.0 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "h1Value"]], 9], "#f65974", "#0092ca" ],
+        "text-halo-color": "mora_text_halo",
+        "text-anchor": "left",
+        "text-halo-width": 1.2,
+        "text-size": 28,
+        "text-opacity": 0.8,
+      }
+    },
+    {
+      "id": "MORA2",
+      "type": "symbol",
+      "mapFilter": "gridmora",
+      "minzoom": 5.2,
+      "maxzoom": 7,
+      "source-layer": "AMA2",
+      "layout": {
+        "text-offset": [0, 0.25],
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-font": ["Open Sans SemiBold"],
+        "text-field": [
+          "format",
+          ["get", "h1Value"], { "font-scale": 1.2 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "h1Value"]], 9], "#f65974", "#0092ca" ],
+        "text-halo-color": "mora_text_halo",
+        "text-anchor": "right",
+        "text-halo-width": 1.2,
+        "text-size": [ "interpolate", ["linear"], ["zoom"], 5.2, 16, 6.5, 27 ],
+        "text-opacity": [ "interpolate", ["linear"], ["zoom"], 5.2, 0, 5.5, 0.6, 6, 0.8 ],
+      }
+    },
+    {
+      "id": "MORA2-1",
+      "type": "symbol",
+      "mapFilter": "gridmora",
+      "minzoom": 5.2,
+      "maxzoom": 7,
+      "source-layer": "AMA2",
+      "layout": {
+        "text-offset": [0.1, 0],
+        "text-allow-overlap": true,
+        "text-rotation-alignment": "map",
+        "text-font": ["Open Sans SemiBold"],
+        "text-field": [
+          "format",
+          ["get", "h2Value"], { "font-scale": 0.85 }
+        ],
+        "text-color": [ "case", [">", ["to-number", ["get", "h1Value"]], 9], "#f65974", "#0092ca" ],
+        "text-halo-color": "mora_text_halo",
+        "text-anchor": "left",
+        "text-halo-width": 1.2,
+        "text-size": [ "interpolate", ["linear"], ["zoom"], 5.2, 16, 6.5, 27 ],
+        "text-opacity": [ "interpolate", ["linear"], ["zoom"], 5.2, 0, 5.5, 0.6, 6, 0.8 ],
+      }
+    },
+  ]
+}
+

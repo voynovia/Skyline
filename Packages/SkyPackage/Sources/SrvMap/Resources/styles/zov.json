@@ -1,0 +1,28 @@
+{
+  "layers": [
+    {
+      "id": "zov_green",
+      "type": "polygon_fill",
+      "mapFilter": "CHART NOTAM",
+      "source-layer": "ZOV_green",
+      "layout": {},
+      "paint": {"fill-color": "zovgreen", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.2 ]}
+    },
+    {
+      "id": "zov_red",
+      "type": "polygon_fill",
+      "mapFilter": "CHART NOTAM",
+      "source-layer": "ZOV_red",
+      "layout": {},
+      "paint": {"fill-color": "zovred", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.2 ]}
+    },
+    {
+      "id": "zov_yellow",
+      "type": "polygon_fill",
+      "mapFilter": "CHART NOTAM",
+      "source-layer": "ZOV_yellow",
+      "layout": {},
+      "paint": {"fill-color": "zovyellow", "fill-opacity": [ "interpolate", ["linear"],["zoom"], 3, 0.0, 4, 0.2 ]}
+    }
+  ]
+}

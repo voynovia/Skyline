@@ -1,0 +1,83 @@
+{
+  "layers": [
+    {
+      "id": "sigmets-polygon_orange",
+      "type": "polygon_fill",
+      "insertAfterId": "SECTOR",
+      "maxzoom": 7.0,
+      "iosFilter": "colorType == 'orange'",
+      "mapFilter": "SIGMETs",
+      "source-layer": "sigmets",
+      "layout": {},
+      "paint": {
+        "fill-color": "sigmets-fill-orange",
+        "fill-opacity": [ "interpolate", ["linear"],["zoom"], 1, 0.0, 3, 0.2 ]
+      }
+    },
+    {
+      "id": "sigmets-polygon_gray",
+      "type": "polygon_fill",
+      "maxzoom": 7.0,
+      "iosFilter": "colorType == 'gray'",
+      "mapFilter": "SIGMETs",
+      "source-layer": "sigmets",
+      "layout": {},
+      "paint": {
+        "fill-color": "sigmets-fill-gray",
+        "fill-opacity": [ "interpolate", ["linear"],["zoom"], 1, 0.0, 3, 0.2 ]
+      }
+    },
+    {
+      "id": "sigmets-polygon_blue",
+      "type": "polygon_fill",
+      "maxzoom": 7.0,
+      "iosFilter": "colorType == 'blue'",
+      "mapFilter": "SIGMETs",
+      "source-layer": "sigmets",
+      "layout": {},
+      "paint": {
+        "fill-color": "sigmets-fill-blue",
+        "fill-opacity": [ "interpolate", ["linear"],["zoom"], 1, 0.0, 3, 0.2 ]
+      }
+    },
+    {
+      "id": "sigmets-line",
+      "type": "line",
+      "maxzoom": 7.0,
+      "mapFilter": "SIGMETs",
+      "source-layer": "sigmets",
+      "layout": {},
+      "paint": {
+        "line-color": "sigmets-border-orange",
+        "line-width": [
+          "interpolate", ["linear"], ["zoom"], 1, 2, 6, 3
+        ],
+        "line-opacity": [
+          "interpolate",
+          ["linear"],["zoom"], 1, 0.01, 5.0, 0.5
+        ]
+      }
+    },
+    {
+      "id": "sigmets-title",
+      "type": "symbol",
+      "mapFilter": "SIGMETs",
+      "minzoom": 3.0,
+      "maxzoom": 7.0,
+      "source-layer": "sigmets",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "map",
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 3.0, 12, 5.5, 16, 9, 20],
+        "text-max-width": 25,
+        "text-field": "{type}"
+      },
+      "paint": {
+        "text-color": "sigmets-text",
+        "text-halo-color": "TEXT_HALO",
+        "text-halo-width": 1.2
+      }
+    },
+  ]
+}

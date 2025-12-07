@@ -1,0 +1,45 @@
+{
+  "layers": [
+    {
+      "id": "RWY_IFR_CIVIL",
+      "type": "fill",
+      "source-layer": "RWY_IFR_CIVIL",
+      "paint": {
+        "fill-color": "diagram_runwayelement",
+        "fill-outline-color": "RWY_OUTLINE"
+      }
+    }, {
+      "id": "RWY_IFR_JOINT",
+      "type": "fill",
+      "source-layer": "RWY_IFR_JOINT",
+      "paint": {
+        "fill-color": "diagram_runwayelement",
+        "fill-outline-color": "RWY_OUTLINE"
+      }
+    }, {
+      "id": "RWY_IFR_MILITARY",
+      "type": "fill",
+      "source-layer": "RWY_IFR_MILITARY",
+      "paint": {
+        "fill-color": "diagram_runwayelement",
+        "fill-outline-color": "RWY_OUTLINE"
+      }
+    }, {
+      "id": "RWY_IFR_PRIVATE",
+      "type": "fill",
+      "source-layer": "RWY_IFR_PRIVATE",
+      "paint": {
+        "fill-color": "diagram_runwayelement",
+        "fill-outline-color": "RWY_OUTLINE"
+      }
+    }, {
+      "id": "RWY_IFR",
+      "type": "fill",
+      "source-layer": "RWY_IFR",
+      "paint": {
+        "fill-color": "diagram_runwayelement",
+        "fill-outline-color": "RWY_OUTLINE"
+      }
+    }
+  ]
+}

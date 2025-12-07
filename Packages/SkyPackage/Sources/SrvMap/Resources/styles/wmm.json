@@ -1,0 +1,40 @@
+{
+  "layers": [
+    {
+      "id": "wmm_line",
+      "type": "line",
+      "minzoom": 1.0,
+      "mapFilter": "WMM",
+      "source-layer": "wmm",
+      "paint": {
+        "line-color": [
+          "case",
+          [">", ["get", "dec"], 0], "#ff0000",
+          ["<", ["get", "dec"], 0], "#0070ff",
+          "#56ff00"],
+        "line-width": [ "case", ["==", ["get", "isBold"], true], 1.0, 0.2 ],
+      }
+    },
+    {
+      "id": "wmm-title",
+      "type": "symbol",
+      "mapFilter": "WMM",
+      "minzoom": 1.0,
+      "source-layer": "wmm",
+      "layout": {
+        "text-allow-overlap": false,
+        "text-rotation-alignment": "line",
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1.0, 14, 2.5, 16, 9, 20],
+        "text-max-width": 25,
+        "text-field": "{label}"
+      },
+      "paint": {
+        "text-color": "sigmets-text",
+        "text-halo-color": "text_invert_halo",
+        "text-halo-width": 2.2
+        
+      }
+    },
+  ]
+}

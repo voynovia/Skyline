@@ -1,0 +1,15 @@
+{
+  "layers": [
+    {
+      "id": "dragLines",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "dragLines",
+      "paint": {
+        "line-dasharray": [3,1],
+        "line-color": "route_line",
+        "line-width": 5
+      }
+    }
+  ]
+}

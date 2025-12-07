@@ -1,0 +1,26 @@
+{
+  "layers": [
+    {
+      "id": "nearbyBox",
+      "minzoom": 1.0,
+      "type": "line",
+      "source-layer": "nearbyBox",
+      "paint": {
+        "line-color": "nearbybox",
+        "line-width": 3
+      }
+    },
+    {
+      "id": "touchPoint",
+      "iosFilter": "tp == 'POI'",
+      "type": "symbol",
+      "minzoom": 1.0,
+      "source-layer": "nearbyBox",
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-image": "airportsWcharts"
+      }
+    }
+  ]
+}

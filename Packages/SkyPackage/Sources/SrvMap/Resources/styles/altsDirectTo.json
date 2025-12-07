@@ -1,0 +1,44 @@
+{
+  "layers": [
+    {
+      "id": "altsDirectTo",
+      "minzoom": 1.0,
+      "type": "line",
+      "insertAfterId": "directNearby",
+      "source-layer": "altsDirectTo",
+      "paint": {
+        "line-color": "directto_line",
+        "line-width": 10
+      }
+    },
+    {
+      "id": "altsDirectTo_ARP",
+      "type": "symbol",
+      "insertAfterId": "directNearby_ARP",
+      "iosFilter": "tp == 'AH'",
+      "source-layer": "altsDirectTo",
+      "minzoom": 1.0,
+      "layout": {
+        "icon-ignore-placement":true,
+        "icon-allow-overlap": true,
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 1.0, 0.9, 7, 1.2, 9, 1.35],
+        "icon-image": "routeAirport",
+        "text-allow-overlap": false,
+        "text-optional":true,
+        "text-anchor": "top",
+        "text-offset": [0, 1.3],
+        "text-font": ["Open Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1.0, 12, 7, 16, 9, 17],
+        "text-field": [
+          "step",
+          ["zoom"],
+          "",
+          5.5, ["get", "nm"],
+          8, ["format", ["get", "nm"], {}, ["concat", "\n", ["get", "nl_en"]], { "font-scale": 0.75 }],
+          11, ["get", "nm"]
+        ]
+      },
+      "paint": { "text-color": "route_ARP_LABEL", "text-halo-color": "route_TEXT_HALO", "text-halo-width": 1.2 }
+    },
+  ]
+}
