@@ -69,9 +69,13 @@ Sources/
 
 <!-- AUTO-MANAGED: key-files -->
 - **Package.swift** — манифест пакета, все targets и зависимости
-- **Sources/UIApp/ContentView.swift** — главный View (MapServer инициализация, MBTiles загрузка/распаковка из cdn.aeromap.app, MapView интеграция, загрузка слоёв из Bundle, progress tracking)
+- **Sources/UIApp/ContentView.swift** — главный View (MapServer инициализация, MBTiles загрузка/распаковка из cdn.aeromap.app, MapView интеграция, загрузка слоёв из Bundle, progress tracking, theme-aware topoLayers выбор через colorScheme)
 - **Sources/UIApp/AppDelegate.swift** — UIApplicationDelegate
-- **Sources/UIApp/Resources/layers/** — JSON конфигурации слоёв карты (topo.json, hypsometry.json)
+- **Sources/SrvMap/MapLayer.swift** — enum слоёв карты (topographyLight, topographyDark, hypsometry), sourceId и layerConfigURL для каждого слоя
+- **Sources/SrvMap/Resources/layers/** — JSON конфигурации слоёв карты:
+  - **topo-light.json** — светлая тема топографии (land #F5F2EE, water #D0D8DC)
+  - **topo-dark.json** — тёмная тема топографии (land #2A2A2A, water #1E2528)
+  - **hypsometry.json** — слои рельефа (гипсометрия)
 - **Sources/SrvCore/App/AppController.swift** — информация о приложении
 - **Sources/SrvCore/Date/** — утилиты работы с датой/временем
 - **Sources/SrvDatabase/DatabaseApp.swift** — GRDB database manager

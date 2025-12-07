@@ -77,16 +77,16 @@ swift test         # тесты
   - **PMTilesSource.swift** — источник из PMTiles (pmtiles:// protocol)
   - **GeoJSONSource.swift** — источник из GeoJSON (URL/Data/dictionary)
 - **Server/**:
-  - **MapServer.swift** — HTTP сервер на FlyingFox, маршрутизация, управление источниками, обработчики запросов (tiles, glyphs, sprites, static files)
+  - **MapServer.swift** — HTTP сервер на FlyingFox, маршрутизация, управление источниками, обработчики запросов (tiles, glyphs, sprites, static files), sourceConfigurationData(for:) для инкапсуляции конфигурации источников (возвращает Data? для Sendable)
   - **ResourceManager.swift** — распаковка ZIP, пути к ресурсам
 - **Databases/**:
   - **SQLiteManager.swift** — connection pool, кэш тайлов, TMS координаты
 - **Views/**:
   - **MapView.swift** — SwiftUI view с WKWebView, MessageName enum (console/zoom/click), MapClickEvent с ClickedLayer (@unchecked Sendable для properties), platform-specific MapWebViewRepresentable (UIViewRepresentable/NSViewRepresentable с #if os()), createWebView helper (@MainActor, WKWebViewConfiguration setup, message handlers, isInspectable), MapViewCoordinator (@MainActor класс, WKScriptMessageHandler conformance через nonisolated func, pending operations queue с isMapLoaded flag), public API методы (addSource с автоматической регистрацией на сервере через type casting, removeSource с server.unregister, reloadSource, addLayer from URL, addLayers inline, removeLayer), event handling (console для map loaded detection, zoom callback, click с parseClickEvent), executeJS с conditional logic (evaluateJavaScript если loaded, queue если pending)
 - **Resources/**:
-  - **base.json** — базовый MapLibre GL стиль (background, land/island/water polygons/lines, sky atmosphere blend)
+  - **base.json** — минимальный базовый стиль (только background layer с цветом воды #D0D8DC, sky atmosphere blend), слои топографии загружаются отдельно из SrvMap
 - **Resources/www/**:
   - **index.html** — HTML bootstrap (<!DOCTYPE html>), viewport meta (width=device-width, initial-scale=1.0), base href для относительных путей, подключение CSS (maplibre-gl.css), JS библиотек (maplibre-gl.js, pmtiles.js) и скриптов (functions.js, map.js), map container div с фоном #002266
   - **functions.js** — IIFE для перехвата console методов (log/error/warn/info/debug), перенаправление в Swift через window.webkit.messageHandlers.console с type и message полями
-  - **map.js** — DOMContentLoaded handler, регистрация pmtiles:// protocol через maplibregl.addProtocol, создание maplibregl.Map (zoom 4, minZoom 2, maxZoom 18, style из base.json), window.mapAPI с методами (addSource с проверкой существования, removeSource с автоудалением связанных слоёв, addLayer с beforeId, addLayerFromURL с автоматическим добавлением source, addLayersInline), обработчики событий (map.on('move') для zoom, map.on('click') для queryRenderedFeatures)
+  - **map.js** — DOMContentLoaded handler, theme detection из URL параметра (?theme=dark/light), регистрация pmtiles:// protocol через maplibregl.addProtocol, создание maplibregl.Map (zoom 3, minZoom 3, maxZoom 18, globe projection), динамическое обновление background-color в зависимости от темы (light: #D0D8DC, dark: #1E2528), window.mapAPI с методами (addSource/removeSource/addLayer/addLayerFromURL/addLayersInline/disableSource/enableSource/setCenter/setZoom/flyTo/getZoom/getCenter), обработчики событий (map.on('move') для zoom с throttle 200ms, map.on('click') для queryRenderedFeatures)
 <!-- END AUTO-MANAGED: key-files -->
