@@ -5,8 +5,8 @@ Swift обёртка над MapLibre GL JS для отображения инт�
 ## Requirements
 
 - Swift 6.2+
-- iOS 16.0+
-- macOS 13.0+
+- iOS 18.0+
+- macOS 15.0+
 
 ## Build Commands
 
@@ -32,8 +32,8 @@ swift test         # тесты
 
 ## Platforms
 
-- macOS 13+
-- iOS 16+
+- macOS 15+
+- iOS 18+
 
 ## Patterns
 

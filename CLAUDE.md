@@ -17,6 +17,7 @@ xcodebuild -project Skyline.xcodeproj -scheme Skyline -destination 'platform=iOS
 # Swift Package build (для отдельных пакетов)
 swift build --package-path Packages/SkyPackage
 swift build --package-path Packages/MapLibreJS
+swift build --package-path Packages/MetarParser
 ```
 
 ## Architecture
@@ -27,7 +28,8 @@ Skyline/
 │   └── SkylineApp.swift     # @main, импортирует UIApp
 ├── Packages/
 │   ├── SkyPackage/          # основной пакет (см. Packages/SkyPackage/CLAUDE.md)
-│   └── MapLibreJS/          # карты (см. Packages/MapLibreJS/CLAUDE.md)
+│   ├── MapLibreJS/          # карты (см. Packages/MapLibreJS/CLAUDE.md)
+│   └── MetarParser/         # парсер METAR/TAF (см. Packages/MetarParser/CLAUDE.md)
 └── Skyline.xcodeproj        # Xcode проект
 ```
 
@@ -66,4 +68,5 @@ Skyline/
 - **Skyline/SkylineApp.swift** — точка входа приложения
 - **Packages/SkyPackage/Package.swift** — манифест основного пакета
 - **Packages/MapLibreJS/Package.swift** — манифест пакета карт
+- **Packages/MetarParser/Package.swift** — манифест пакета парсера METAR/TAF
 <!-- END AUTO-MANAGED: key-files -->

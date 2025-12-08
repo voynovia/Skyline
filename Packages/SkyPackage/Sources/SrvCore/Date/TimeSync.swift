@@ -24,7 +24,6 @@ public final class TimeSync {
   
   // синхронизация с ntp серверами
   public static func sync() async {
-    print(#function)
     await withCheckedContinuation { continuation in
       Clock.sync(first: { date,_ in
         UserDefaults.standard.set(date.timeIntervalSince1970, forKey: lastSyncKey)

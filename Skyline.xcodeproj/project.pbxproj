@@ -11,8 +11,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B394F0782EE5BA1700E857CE /* MapLibreJS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MapLibreJS; sourceTree = "<group>"; };
-		B394F0792EE5BA1700E857CE /* SkyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SkyPackage; sourceTree = "<group>"; };
+		B389FA942EE70FE8009A6562 /* MapLibreJS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MapLibreJS; sourceTree = "<group>"; };
+		B38900F22EE71691009A6562 /* MetarParser */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MetarParser; sourceTree = "<group>"; };
+		B389FA952EE70FE8009A6562 /* SkyPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SkyPackage; sourceTree = "<group>"; };
 		F72F114D2D7CEC6700265D0A /* Skyline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skyline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,11 +37,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B394F07A2EE5BA1700E857CE /* Packages */ = {
+		B389FA962EE70FE8009A6562 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				B394F0782EE5BA1700E857CE /* MapLibreJS */,
-				B394F0792EE5BA1700E857CE /* SkyPackage */,
+				B38900F22EE71691009A6562 /* MetarParser */,
+				B389FA942EE70FE8009A6562 /* MapLibreJS */,
+				B389FA952EE70FE8009A6562 /* SkyPackage */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -48,7 +50,7 @@
 		F72F11442D7CEC6700265D0A = {
 			isa = PBXGroup;
 			children = (
-				B394F07A2EE5BA1700E857CE /* Packages */,
+				B389FA962EE70FE8009A6562 /* Packages */,
 				F72F114F2D7CEC6700265D0A /* Skyline */,
 				F72F115F2D7CF01800265D0A /* Frameworks */,
 				F72F114E2D7CEC6700265D0A /* Products */,
@@ -120,6 +122,8 @@
 			);
 			mainGroup = F72F11442D7CEC6700265D0A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F72F114E2D7CEC6700265D0A /* Products */;
 			projectDirPath = "";
